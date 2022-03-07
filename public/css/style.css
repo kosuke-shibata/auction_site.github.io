@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f8fff8;
+}
+
+body header {
+  top: 0;
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 100px;
+  background: #fff;
+  border-bottom: 1px solid #000;
+  z-index: 10;
+}
+
+body header h1 {
+  padding-left: 50px;
+  width: 100%;
+}
+
+body header h1 a img {
+  height: 80px;
+}
+
+body header .menu-command {
+  float: right;
+  margin-right: 100px;
+}
+
+body header .menu-command .menu-button {
+  display: none;
+}
+
+body header .menu-command .nav {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  text-align: center;
+  height: 100px;
+}
+
+body header .menu-command .nav li {
+  width: 100px;
+  line-height: 100px;
+}
+
+body header .menu-command .nav li a {
+  color: #000;
+  text-decoration: none;
+  border-bottom: 0px;
+  position: relative;
+  font-size: 1.3vw;
+}
+
+body header .menu-command .nav li a:hover {
+  opacity: 0.7;
+}
+
+body header .menu-command .nav li a img {
+  margin-top: 25px;
+  width: 50%;
+}
+
+body main {
+  margin-top: 100px;
+}
+
+body main #works_block {
+  margin: 0 auto;
+  padding-top: 200px;
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+body main #works_block .work_block {
+  margin: 30px 20px 50px;
+  box-shadow: 3px 3px 5px #e7e7e7;
+}
+
+body main #works_block .work_block a {
+  text-decoration: none;
+  color: #000;
+}
+
+body main #works_block .work_block a img {
+  width: 250px;
+  height: 250px;
+  vertical-align: middle;
+}
+
+body main #works_block .work_block a .work_info p {
+  text-align: left;
+  background: #fff;
+  font-size: 12px;
+  line-height: 20px;
+  margin: 0 auto;
+  width: 210px;
+  padding: 20px;
+}
+
+body main #paginate {
+  padding: 30px;
+  text-align: center;
+}
+
+body main #paginate .example li {
+  display: inline;
+}
+
+body main #contact {
+  background: #636363;
+  padding-top: 50px;
+}
+
+body main #contact .form {
+  width: 70%;
+  margin: 0 auto;
+  color: #f3f3f3;
+}
+
+body main #contact .form h3 {
+  font-size: 40px;
+}
+
+body main #contact .form form {
+  width: 700px;
+  padding: 10px;
+}
+
+body main #contact .form form input {
+  margin-bottom: 20px;
+}
+
+body main #contact .form form input.name {
+  width: 500px;
+  height: 24px;
+}
+
+body main #contact .form form input.mail {
+  width: 500px;
+  height: 24px;
+}
+
+body main #contact .form form input.submit {
+  margin-top: -35px;
+  display: block;
+  margin-left: auto;
+  width: 80px;
+  height: 30px;
+}
+
+body main #contact .form form textarea {
+  width: 600px;
+  height: 100px;
+}
+
+body main #work_detail {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+body main #work_detail .detail_img {
+  width: 50%;
+  margin-bottom: 100px;
+}
+
+body main #work_detail .detail_img img {
+  width: 90%;
+}
+
+body main #work_detail .detail_img .worker {
+  display: block;
+  padding: 20px;
+  text-decoration: underline;
+  font-size: 1.5vw;
+  color: #000;
+}
+
+body main #work_detail .detail_text {
+  width: 50%;
+  overflow-wrap: break-word;
+  margin-bottom: 100px;
+}
+
+body main #work_detail .detail_text .detail_title {
+  margin-top: 20px;
+  font-size: 3vw;
+}
+
+body main #work_detail .detail_text .price {
+  margin-top: 40px;
+  font-size: 2vw;
+  color: #ad0000;
+}
+
+body main #work_detail .detail_text .btn {
+  margin-top: 20px;
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50px;
+  border: none;
+  background: #ebeb00;
+  box-shadow: 1px 1px 3px #a3a3a3;
+}
+
+body main #work_detail .detail_text .detail_message {
+  margin-top: 20px;
+  width: 100%;
+}
+
+body footer {
+  text-align: center;
+  background: #000;
+  color: #fff;
+  height: 40px;
+  line-height: 40px;
+}
+
+

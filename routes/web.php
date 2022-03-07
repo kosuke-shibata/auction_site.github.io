@@ -11,4 +11,13 @@
 |
 */
 
-Route::get('/work', 'AuctionController@index');
+// Route::get('/work', 'AuctionController@index');
+
+Route::get('/', 'TransactionController@index');
+
+Route::get('/item/', 'TransactionController@detail');
+
+Route::get('/create', 'TransactionController@create');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
