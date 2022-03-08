@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+                <div class="card-header">{{ __('新規登録') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -43,7 +43,7 @@
                             <label for="introduce" class="col-md-4 col-form-label text-md-right">{{ __('自己紹介') }}</label>
 
                             <div class="col-md-6">
-                                <input id="introduce" type="text" class="form-control @error('introduce') is-invalid @enderror" name="introduce" value="{{ old('introduce') }}" required autocomplete="off">
+                                <textarea id="introduce" type="text" class="form-control intro  @error('introduce') is-invalid @enderror" name="introduce" value="{{ old('introduce') }}" required autocomplete="off"></textarea>
 
                                 @error('introduce')
                                     <span class="invalid-feedback" role="alert">
@@ -57,7 +57,7 @@
                             <label for="portfolio" class="col-md-4 col-form-label text-md-right">{{ __('ポートフォリオ') }}</label>
 
                             <div class="col-md-6">
-                                <input id="portfolio" type="text" class="form-control @error('portfolio') is-invalid @enderror" name="portfolio" value="{{ old('portfolio') }}" required autocomplete="off">
+                                <input id="portfolio" type="text" class="form-control @error('portfolio') is-invalid @enderror" name="portfolio" value="{{ old('portfolio') }}" autocomplete="off">
 
                                 @error('portfolio')
                                     <span class="invalid-feedback" role="alert">
@@ -71,7 +71,7 @@
                             <label for="sns" class="col-md-4 col-form-label text-md-right">{{ __('SNS') }}</label>
 
                             <div class="col-md-6">
-                                <input id="sns" type="text" class="form-control @error('sns') is-invalid @enderror" name="sns" value="{{ old('sns') }}" required autocomplete="off">
+                                <input id="sns" type="text" class="form-control @error('sns') is-invalid @enderror" name="sns" value="{{ old('sns') }}" autocomplete="off">
 
                                 @error('sns')
                                     <span class="invalid-feedback" role="alert">
@@ -85,7 +85,7 @@
                             <label for="credit" class="col-md-4 col-form-label text-md-right">{{ __('クレジットカード') }}</label>
 
                             <div class="col-md-6">
-                                <input id="credit" type="text" class="form-control @error('credit') is-invalid @enderror" name="credit" value="{{ old('credit') }}" required autocomplete="off">
+                                <input id="credit" type="text" class="form-control @error('credit') is-invalid @enderror" name="credit" value="{{ old('credit') }}"  autocomplete="off">
 
                                 @error('credit')
                                     <span class="invalid-feedback" role="alert">
@@ -130,4 +130,7 @@
         </div>
     </div>
 </div>
+<footer>
+  <small>©︎2022 first item</small>
+</footer>
 @endsection

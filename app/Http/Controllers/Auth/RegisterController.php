@@ -54,10 +54,10 @@ class RegisterController extends Controller
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'introduce' => ['required', 'string', 'max:500'],
-            'portfolio' => 'nullable|text',
-            'sns' => 'nullable|text',
-            'image_path' => 'nullable|text',
-            'credit' => ['string', 'max:255', 'unique:users'],
+            // 'portfolio' => ['nullable','string'],
+            // 'sns' => ['nullable','string'],
+            // 'image_path' => ['nullable','string'],
+            // 'credit' => ['string', 'max:255', 'unique:users'],
         ]);
     }
 

@@ -15,7 +15,7 @@
 
 Route::get('/', 'TransactionController@index');
 
-Route::get('/item/', 'TransactionController@detail');
+Route::get('/item/{work}', 'TransactionController@detail');
 
 Route::get('/create', 'TransactionController@create');
 Auth::routes();

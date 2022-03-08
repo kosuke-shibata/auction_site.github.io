@@ -10,14 +10,14 @@ use App\WorkFile;
 
 class TransactionController extends Controller
 {
-    public function index(Work $work, WorkImage $work_image)
+    public function index(Work $work)
     {
-        return view('transaction/index')->with(['works' => $work->get()])->with(['work_images' => $work_image->get()]);
+        return view('transaction/index')->with(['works' => $work->get()]);
     }
     
-    public function detail()
+    public function detail(Work $work)
     {
-        return view('transaction/work_detail');
+        return view('transaction/work_detail')->with(['work' => $work]);
     }
     
     public function add()
@@ -32,10 +32,11 @@ class TransactionController extends Controller
   
         //s3アップロード開始
         $image = $request->file('image');
-        // バケットの`ppublic/images`フォルダへアップロード
+        // バケットの`public/images`フォルダへアップロード
         $path = Storage::disk('s3')->put('/public/images', $image);
         // アップロードした画像のフルパスを取得
         $work_image->image = Storage::disk('s3')->url($path);
+        
         $work_image->work_id = Storage::disk('s3')->// work_idを取得するための記述
   
         $work_image->save();

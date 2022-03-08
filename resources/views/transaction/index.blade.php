@@ -1,111 +1,94 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')　　　　　　　　　
 
-    <title>first item</title>
-    <link href="{{ secure_asset('css/style.css') }}" rel="stylesheet">
-        
-  </head>
+@section('content')
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
   <body>
-    <header>
-      <h1 class="main_title"><a href="/"><img src="images/main-title.png" alt=""></a></h1>
-      <div class="menu-command">
-        <button class="menu-button">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <ul class="nav">
-          <li><a href="">新規登録</a></li>
-          <li><a href="">ログイン</a></li>
-          <li><a href=""><img src="images/cart.png" alt=""></a></li>
-        </ul>
-      </div>
-    </header>
     <main>
       <section id="works_block">
-        <div class="work_block">
-          <a href="/work_detail.html">
-            <img src="images/Onsen-hotel-site2.png" alt="">
-            <div class="work_info">
-              <p>テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。</p>
-            </div>
-          </a>
-        </div>
-        <div class="work_block">
-          <a href="/work_detail.html">
+        @foreach ($works as $work)
+          <div class="work_block">
+            <a href="/item/{{ $work->id }}">
+              <img src="{{ $work->image }}" alt="">
+              <div class="work_info">
+                <h2>{{ $work->title }}</h2>
+                <p>¥{{ $work->price }}</p>
+              </div>
+            </a>
+          </div>
+        @endforeach
+        <!--<div class="work_block">-->
+        <!--  <a href="/work_detail.html">-->
 
-            <img src="images/cosmetic-site.png" alt="">
-            <div class="work_info">
-              <p>テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。</p>
-            </div>
-          </a>
-        </div>
-        <div class="work_block">
-          <a href="/work_detail.html">
+        <!--    <img src="images/cosmetic-site.png" alt="">-->
+        <!--    <div class="work_info">-->
+        <!--      <p>テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。</p>-->
+        <!--    </div>-->
+        <!--  </a>-->
+        <!--</div>-->
+        <!--<div class="work_block">-->
+        <!--  <a href="/work_detail.html">-->
 
-            <img src="images/fishing-school.png" alt="">
-            <div class="work_info">
-              <p>テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。</p>
-            </div>
-          </a>
-        </div>
-        <div class="work_block">
-          <a href="/work_detail.html">
+        <!--    <img src="images/fishing-school.png" alt="">-->
+        <!--    <div class="work_info">-->
+        <!--      <p>テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。</p>-->
+        <!--    </div>-->
+        <!--  </a>-->
+        <!--</div>-->
+        <!--<div class="work_block">-->
+        <!--  <a href="/work_detail.html">-->
 
-            <img src="images/fishing-web.png" alt="">
-            <div class="work_info">
-              <p>テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。</p>
-            </div>
-          </a>
-        </div>
-        <div class="work_block">
-          <a href="/work_detail.html">
+        <!--    <img src="images/fishing-web.png" alt="">-->
+        <!--    <div class="work_info">-->
+        <!--      <p>テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。</p>-->
+        <!--    </div>-->
+        <!--  </a>-->
+        <!--</div>-->
+        <!--<div class="work_block">-->
+        <!--  <a href="/work_detail.html">-->
 
-            <img src="images/download (1).png" alt="">
-            <div class="work_info">
-              <p>テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。</p>
-            </div>
-          </a>
-        </div>
-        <div class="work_block">
-          <a href="/work_detail.html">
+        <!--    <img src="images/download (1).png" alt="">-->
+        <!--    <div class="work_info">-->
+        <!--      <p>テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。</p>-->
+        <!--    </div>-->
+        <!--  </a>-->
+        <!--</div>-->
+        <!--<div class="work_block">-->
+        <!--  <a href="/work_detail.html">-->
 
-            <img src="images/download (1).png" alt="">
-            <div class="work_info">
-              <p>テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。</p>
-            </div>
-          </a>
-        </div>
-        <div class="work_block">
-          <a href="/work_detail.html">
+        <!--    <img src="images/download (1).png" alt="">-->
+        <!--    <div class="work_info">-->
+        <!--      <p>テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。</p>-->
+        <!--    </div>-->
+        <!--  </a>-->
+        <!--</div>-->
+        <!--<div class="work_block">-->
+        <!--  <a href="/work_detail.html">-->
 
-            <img src="images/download (1).png" alt="">
-            <div class="work_info">
-              <p>テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。</p>
-            </div>
-          </a>
-        </div>
-        <div class="work_block">
-          <a href="/work_detail.html">
+        <!--    <img src="images/download (1).png" alt="">-->
+        <!--    <div class="work_info">-->
+        <!--      <p>テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。</p>-->
+        <!--    </div>-->
+        <!--  </a>-->
+        <!--</div>-->
+        <!--<div class="work_block">-->
+        <!--  <a href="/work_detail.html">-->
 
-            <img src="images/download (1).png" alt="">
-            <div class="work_info">
-              <p>テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。</p>
-            </div>
-          </a>
-        </div>
-        <div class="work_block">
-          <a href="/work_detail.html">
+        <!--    <img src="images/download (1).png" alt="">-->
+        <!--    <div class="work_info">-->
+        <!--      <p>テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。</p>-->
+        <!--    </div>-->
+        <!--  </a>-->
+        <!--</div>-->
+        <!--<div class="work_block">-->
+        <!--  <a href="/work_detail.html">-->
 
-            <img src="images/download (1).png" alt="">
-            <div class="work_info">
-              <p>テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。</p>
-            </div>
-          </a>
-        </div>
+        <!--    <img src="images/download (1).png" alt="">-->
+        <!--    <div class="work_info">-->
+        <!--      <p>テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。</p>-->
+        <!--    </div>-->
+        <!--  </a>-->
+        <!--</div>-->
       </section>
       <div id="paginate">
         <ul class="example">
@@ -145,3 +128,4 @@
     </footer>
   </body>
 </html>
+@endsection

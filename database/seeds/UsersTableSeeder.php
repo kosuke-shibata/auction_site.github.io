@@ -12,7 +12,7 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         DB::table('users')->insert([
-            'id' => 1,
+            'id' => 2,
             'name' => '柴田光祐',
             'introduce' => '初めまして。よろしくお願いします。',
             'credit' => '123456789',
@@ -21,7 +21,7 @@ class UsersTableSeeder extends Seeder
         ]);
         
         DB::table('users')->insert([
-            'id' => 2,
+            'id' => 3,
             'name' => '山田太郎',
             'introduce' => '僕は山田太郎だ。男だ。22歳だ。',
             'credit' => '987654321',

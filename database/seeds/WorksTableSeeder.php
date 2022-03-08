@@ -12,7 +12,7 @@ class WorksTableSeeder extends Seeder
     public function run()
     {
         DB::table('works')->insert([
-            'id' => 1,
+           'id' => 2,
            'title' => '架空スクールのホームページ',
            'body' => 'うまくできました。',
            'price' => 0,
@@ -20,7 +20,7 @@ class WorksTableSeeder extends Seeder
         ]);
         
         DB::table('works')->insert([
-            'id' => 2,
+            'id' => 3,
             'title' => 'プログラミングスクールでありそうなバナー',
             'body' => 'あくまでも偏見です。',
             'price' => 0,

@@ -18,8 +18,7 @@ class AddUserInfoColumnToUsersTable extends Migration
             $table->text('portfolio')->nullable();
             $table->text('sns')->nullable();
             $table->text('image_path')->nullable();
-            $table->string('credit', 255)->unique();
-            $table->string('password', 20)->change();
+            $table->string('credit', 255)->unique()->nullable();
         });
     }
 
