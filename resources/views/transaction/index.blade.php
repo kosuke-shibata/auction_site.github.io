@@ -91,13 +91,7 @@
         <!--</div>-->
       </section>
       <div id="paginate">
-        <ul class="example">
-          <li>前へ</li>
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>次へ</li>
-          </ul>
+        {{ $works->links('pagination::default') }}
       </div>
       <section id="contact">
         <div class="form">

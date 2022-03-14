@@ -12,7 +12,7 @@ class TransactionController extends Controller
 {
     public function index(Work $work)
     {
-        return view('transaction/index')->with(['works' => $work->get()]);
+        return view('transaction/index')->with(['works' => $work->getPaginateByLimit()]);
     }
     
     public function detail(Work $work)

@@ -54,6 +54,20 @@
                         </div>
                         
                         <div class="form-group row">
+                            <label for="image_path" class="col-md-4 col-form-label text-md-right">{{ __('プロフィール画像') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="image_path" type="file" class="form-control @error('image_path') is-invalid @enderror" name="image_path" autocomplete="off">
+
+                                @error('')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+                        
+                        <div class="form-group row">
                             <label for="portfolio" class="col-md-4 col-form-label text-md-right">{{ __('ポートフォリオ') }}</label>
 
                             <div class="col-md-6">

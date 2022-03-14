@@ -1,3 +1,4 @@
+
 @section('content')
   <form action="{{ action('TransactionController@create') }}" method="post" enctype="multipart/form-data">
     <!-- アップロードフォームの作成 -->
