@@ -50,6 +50,6 @@ class User extends Authenticatable
     }
     
     public function purchase_history() {
-        return $this->hasOne('App\P');
+        return $this->hasOne('App\PurchaseHistory');
     }
 }

@@ -14,7 +14,7 @@ class Work extends Model
     }
     
     protected $fillable = [
-        'title', 'body', 'user_id'    
+        'title', 'body', 'price', 'image_path', 'user_id'    
     ];
     
     
@@ -22,9 +22,6 @@ class Work extends Model
         return $this->belongsto('App\User');
     }
     
-    public function work_images() {
-        return $this->hasMany('App\WorkImage');
-    }
     
     public function work_files() {
         return $this->hasMany('App\WorkFile');

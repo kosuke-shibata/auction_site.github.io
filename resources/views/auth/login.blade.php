@@ -70,7 +70,4 @@
         </div>
     </div>
 </div>
-<footer>
-  <small>©︎2022 first item</small>
-</footer>
 @endsection

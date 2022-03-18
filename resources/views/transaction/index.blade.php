@@ -2,14 +2,11 @@
 @extends('layouts.app')　　　　　　　　　
 
 @section('content')
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-  <body>
-    <main>
       <section id="works_block">
         @foreach ($works as $work)
           <div class="work_block">
             <a href="/item/{{ $work->id }}">
-              <img src="{{ $work->image }}" alt="">
+              <img src="{{ $work->image_path }}" alt="">
               <div class="work_info">
                 <h2>{{ $work->title }}</h2>
                 <p>¥{{ $work->price }}</p>
@@ -17,78 +14,6 @@
             </a>
           </div>
         @endforeach
-        <!--<div class="work_block">-->
-        <!--  <a href="/work_detail.html">-->
-
-        <!--    <img src="images/cosmetic-site.png" alt="">-->
-        <!--    <div class="work_info">-->
-        <!--      <p>テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。</p>-->
-        <!--    </div>-->
-        <!--  </a>-->
-        <!--</div>-->
-        <!--<div class="work_block">-->
-        <!--  <a href="/work_detail.html">-->
-
-        <!--    <img src="images/fishing-school.png" alt="">-->
-        <!--    <div class="work_info">-->
-        <!--      <p>テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。</p>-->
-        <!--    </div>-->
-        <!--  </a>-->
-        <!--</div>-->
-        <!--<div class="work_block">-->
-        <!--  <a href="/work_detail.html">-->
-
-        <!--    <img src="images/fishing-web.png" alt="">-->
-        <!--    <div class="work_info">-->
-        <!--      <p>テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。</p>-->
-        <!--    </div>-->
-        <!--  </a>-->
-        <!--</div>-->
-        <!--<div class="work_block">-->
-        <!--  <a href="/work_detail.html">-->
-
-        <!--    <img src="images/download (1).png" alt="">-->
-        <!--    <div class="work_info">-->
-        <!--      <p>テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。</p>-->
-        <!--    </div>-->
-        <!--  </a>-->
-        <!--</div>-->
-        <!--<div class="work_block">-->
-        <!--  <a href="/work_detail.html">-->
-
-        <!--    <img src="images/download (1).png" alt="">-->
-        <!--    <div class="work_info">-->
-        <!--      <p>テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。</p>-->
-        <!--    </div>-->
-        <!--  </a>-->
-        <!--</div>-->
-        <!--<div class="work_block">-->
-        <!--  <a href="/work_detail.html">-->
-
-        <!--    <img src="images/download (1).png" alt="">-->
-        <!--    <div class="work_info">-->
-        <!--      <p>テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。</p>-->
-        <!--    </div>-->
-        <!--  </a>-->
-        <!--</div>-->
-        <!--<div class="work_block">-->
-        <!--  <a href="/work_detail.html">-->
-
-        <!--    <img src="images/download (1).png" alt="">-->
-        <!--    <div class="work_info">-->
-        <!--      <p>テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。</p>-->
-        <!--    </div>-->
-        <!--  </a>-->
-        <!--</div>-->
-        <!--<div class="work_block">-->
-        <!--  <a href="/work_detail.html">-->
-
-        <!--    <img src="images/download (1).png" alt="">-->
-        <!--    <div class="work_info">-->
-        <!--      <p>テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。</p>-->
-        <!--    </div>-->
-        <!--  </a>-->
-        <!--</div>-->
       </section>
       <div id="paginate">
         {{ $works->links('pagination::default') }}
@@ -116,10 +41,4 @@
           </form>
         </div>
       </section>
-    </main> 
-    <footer>
-      <small>©︎2022 first item</small>
-    </footer>
-  </body>
-</html>
 @endsection

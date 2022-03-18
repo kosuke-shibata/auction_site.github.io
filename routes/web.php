@@ -18,6 +18,14 @@ Route::get('/', 'TransactionController@index');
 Route::get('/item/{work}', 'TransactionController@detail');
 
 Route::get('/create', 'TransactionController@create');
+
+Route::post('/create', 'TransactionController@store');
+
+Route::get('/create/{work}', 'TransactionController@display');
+
+Route::get('/profile/{user}', 'TransactionController@profile');
+
+Route::get('/edit', 'TransactionController@edit');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

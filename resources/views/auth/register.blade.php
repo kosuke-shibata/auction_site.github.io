@@ -57,7 +57,7 @@
                             <label for="image_path" class="col-md-4 col-form-label text-md-right">{{ __('プロフィール画像') }}</label>
 
                             <div class="col-md-6">
-                                <input id="image_path" type="file" class="form-control @error('image_path') is-invalid @enderror" name="image_path" autocomplete="off">
+                                <input id="image_path" type="file" class="form-control @error('image_path') is-invalid @enderror" name="image_path" value="https://auctionworksbucket.s3.ap-northeast-1.amazonaws.com/public/images/profile_image.png" autocomplete="off">
 
                                 @error('')
                                     <span class="invalid-feedback" role="alert">
@@ -144,7 +144,4 @@
         </div>
     </div>
 </div>
-<footer>
-  <small>©︎2022 first item</small>
-</footer>
 @endsection

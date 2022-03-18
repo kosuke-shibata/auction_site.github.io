@@ -216,7 +216,7 @@ body {
                         font-size: 20px;
                       }
                       .col-md-6 {
-                        #work_image, #image_path {
+                        #work_image, #work_file, #image_path {
                           border: none;
                         }
                         .form-control {
@@ -253,6 +253,83 @@ body {
                   }
                 }
               }
+            }
+          }
+        }
+      }
+    }
+    #display_block {
+      width: 60%;
+      margin: 0 auto;
+      padding-top: 100px;
+      overflow-wrap: break-word;
+      font-size: 24px;   
+      dl {
+        dd {
+          padding-left: 150px;
+          margin-top: -36px;
+          margin-bottom: 50px;
+          img {
+            width: 300px;
+          }
+        }
+      }
+    }
+    .return {
+      display: block;
+      text-align: right;
+      padding-right: 200px;
+      padding-bottom: 20px;
+      font-size: 20px;
+      color: #000;
+    }
+    #profile_info {
+      width: 80%;
+      margin: 0 auto;
+      h2 {
+        font-size: 40px;
+        padding-top: 30px;
+      }
+      .edit {
+        display: block;
+        text-align: right;
+        padding-bottom: 20px;
+        font-size: 20px;
+        color: #000;
+      }
+      .profile_text {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 100px;
+        .profile_image {
+          width: 50%;
+          img {
+            width: 80%;
+          }
+        }
+        .profile_message {
+          width: 50%;
+          font-size: 24px;
+          dl {
+            dd {
+              margin: -36px auto 30px 200px;
+            }
+          }
+        }
+      }
+      .profile_works, .profile_purchase_histories {
+        margin: 50px auto;
+        h3 {
+          font-size: 30px;
+        }
+        .profile_blocks {
+          display: flex;
+          justify-content: space-between;
+          padding-top: 100px;
+          .profile_block {
+            width: 30%;
+            img {
+              width: 100%;
             }
           }
         }

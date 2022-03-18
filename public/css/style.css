@@ -253,6 +253,7 @@ body main .container .row.justify-content-center .col-md-8 .card .card-body form
 }
 
 body main .container .row.justify-content-center .col-md-8 .card .card-body form .form-group.row .col-md-6 #work_image,
+body main .container .row.justify-content-center .col-md-8 .card .card-body form .form-group.row .col-md-6 #work_file,
 body main .container .row.justify-content-center .col-md-8 .card .card-body form .form-group.row .col-md-6 #image_path {
   border: none;
 }
@@ -287,6 +288,101 @@ body main .container .row.justify-content-center .col-md-8 .card .card-body form
   color: #000;
   box-shadow: none;
   padding-left: 20px;
+}
+
+body main #display_block {
+  width: 60%;
+  margin: 0 auto;
+  padding-top: 100px;
+  overflow-wrap: break-word;
+  font-size: 24px;
+}
+
+body main #display_block dl dd {
+  padding-left: 150px;
+  margin-top: -36px;
+  margin-bottom: 50px;
+}
+
+body main #display_block dl dd img {
+  width: 300px;
+}
+
+body main .return {
+  display: block;
+  text-align: right;
+  padding-right: 200px;
+  padding-bottom: 20px;
+  font-size: 20px;
+  color: #000;
+}
+
+body main #profile_info {
+  width: 80%;
+  margin: 0 auto;
+}
+
+body main #profile_info h2 {
+  font-size: 40px;
+  padding-top: 30px;
+}
+
+body main #profile_info .edit {
+  display: block;
+  text-align: right;
+  padding-bottom: 20px;
+  font-size: 20px;
+  color: #000;
+}
+
+body main #profile_info .profile_text {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 100px;
+}
+
+body main #profile_info .profile_text .profile_image {
+  width: 50%;
+}
+
+body main #profile_info .profile_text .profile_image img {
+  width: 80%;
+}
+
+body main #profile_info .profile_text .profile_message {
+  width: 50%;
+  font-size: 24px;
+}
+
+body main #profile_info .profile_text .profile_message dl dd {
+  margin: -36px auto 30px 200px;
+}
+
+body main #profile_info .profile_works,
+body main #profile_info .profile_purchase_histories {
+  margin: 50px auto;
+}
+
+body main #profile_info .profile_works h3,
+body main #profile_info .profile_purchase_histories h3 {
+  font-size: 30px;
+}
+
+body main #profile_info .profile_works .profile_blocks,
+body main #profile_info .profile_purchase_histories .profile_blocks {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 100px;
+}
+
+body main #profile_info .profile_works .profile_blocks .profile_block,
+body main #profile_info .profile_purchase_histories .profile_blocks .profile_block {
+  width: 30%;
+}
+
+body main #profile_info .profile_works .profile_blocks .profile_block img,
+body main #profile_info .profile_purchase_histories .profile_blocks .profile_block img {
+  width: 100%;
 }
 
 body footer {
