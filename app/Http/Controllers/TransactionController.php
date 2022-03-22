@@ -4,10 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use App\Http\Requests\WorkRequest;
 use App\User;
 use App\Work;
-use Illuminate\Support\Facades\Storage;
 use App\WorkFile;
+use Illuminate\Http\File;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Auth;
 
 class TransactionController extends Controller
@@ -49,33 +51,37 @@ class TransactionController extends Controller
     
     public function store(Request $request, Work $work, WorkFile $work_file) {
         
-        
         //work_imagesのwork_idの中にworkのidを挿入する
-        $work_id_image = Auth::work()->id;
-        $image = $request->file('image');
-        $path_image = Storage::disk('s3')->put('/public/images', $image);
-        $work_image->image = Storage::disk('s3')->url($path_image);
-        $work_image->save();
-        
-        $work_id_file = Auth::work()->id;
-        $file = $request->file('file');
-        $path_file = Storage::disk('s3')->put('/public/files', $file);
-        $work_file->file = Stroage::disk('s3')->url($path_file);
-        $work_file->save();
+        $form = $request->all();
+        $image = $request->file('image_path');
+        $image_path = Storage::disk('s3')->put('/images', $image, '$image', 'public');
+        $work->image_path = Storage::disk('s3')->url($image_path);
         
         $user_id = Auth::id();
-        $input = $request['work'];
-        $work->fill($input)->save();
+        $input_work = $request['work'];
+        // dd($request['work']);
+        $work->fill($input_work);
+        $work->save();
+        
+        
+        $file = $request->file('file_path');
+        $file_path = Storage::disk('s3')->put('/files', $file, '$file', 'public');
+        $work_file->file_path = Storage::disk('s3')->url($file_path);
+        $work_file->work_id = $work->id;
+        $work_file->save();
+        
         
         return redirect('/create/' . $work->id);
     }
     
-    public function display(Work $work) {
-        return view('transaction/display')->with(['work' => $work]);
+    public function display(Work $work, WorkFile $work_file) {
+        
+        // dd($work_file);
+        return view('transaction/display')->with(['work' => $work, 'work_file' => $work_file->where('work_id', $work->id)->first()]);
     }
     
-    public function profile(User $user) {
-        return view('transaction/profile')->with(['user' => $user]);
+    public function profile(User $user, Work $work) {
+        return view('transaction/profile')->with(['user' => $user])->with(['works' => $work->get()]);
     }
     
     public function edit(User $user) {

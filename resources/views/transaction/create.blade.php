@@ -7,7 +7,7 @@
                 <div class="card">
                     <div class="card-header">出品</div>
                     <div class="card-body">
-                        <form method="POST" action="/create">
+                        <form method="POST" action="/create"  enctype="multipart/form-data">
                           @csrf
                             <div class="form-group row">
                                 <label for="title" class="col-md-4 col-form-label text-md-right">{{ __('出品者:') }}</label>
@@ -46,7 +46,6 @@
                                       <option value="5000">5000</option>
                                       <option value="1000">10000</option>
                                     </select>
-                                    <!--<input id="price" type="text" class="form-control @error('price') is-invalid @enderror" name="work[price]" value="{{ old('work.price') }}" required autocomplete="price">-->
     
                                       @error('price')
                                         <span class="invalid-feedback" role="alert">
@@ -73,7 +72,7 @@
                               <label for="work_image" class="col-md-4 col-form-label text-md-right">{{ __('画像:') }}</label>
   
                               <div class="col-md-6">
-                                  <input id="work_image" type="file" class="form-control @error('work_image') is-invalid @enderror" name="image" accept=".png, .jpg, .jpeg" multiple required autocomplete="work_image" autofocus>
+                                  <input id="work_image" type="file" class="form-control @error('work_image') is-invalid @enderror" name="image_path" accept=".png, .jpg, .jpeg" multiple required autocomplete="work_image" autofocus>
   
                                       @error('work_image')
                                         <span class="invalid-feedback" role="alert">
@@ -87,7 +86,7 @@
                               <label for="work_file" class="col-md-4 col-form-label text-md-right">{{ __('ファイル:') }}</label>
   
                               <div class="col-md-6">
-                                  <input id="work_file" type="file" class="form-control @error('work_file') is-invalid @enderror" name="file" multiple required autocomplete="work_file" autofocus>
+                                  <input id="work_file" type="file" class="form-control @error('work_file') is-invalid @enderror" name="file_path" multiple required autocomplete="work_file" autofocus>
   
                                       @error('work_image')
                                         <span class="invalid-feedback" role="alert">

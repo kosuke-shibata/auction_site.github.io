@@ -1,9 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-  <body>
-    <main>
       <section id="display_block">
         <dl>
           <dt>タイトル:</dt>
@@ -13,16 +10,12 @@
           <dt>商品説明:</dt>
           <dd> {{ $work->body }}</dd>
           <dt>画像:</dt>
-          <dd><img src="{{ $work_image->image }}" alt=""></dd>
+          <dd><img src="{{ $work->image_path }}" alt=""></dd>
           <dt>ファイル:</dt>
-          <dd>{{ $work_file->file }}</dd>
+          <dd><a href="{{ $work_file->file_path }}">{{ $work_file->file_path }}</a></dd>
+
         </dl>
       </section>
-      <a class="edit" href="/create.html">編集する</a>
-      <a class="return" href="/index.html">戻る</a>
-    </main> 
-    <footer>
-      <small>©︎2022 first item</small>
-    </footer>
-  </body>
-</html>
+      <a class="edit" href="/create/edit">編集する</a>
+      <a class="return" href="/">戻る</a>
+@endsection

@@ -25,7 +25,7 @@
                             <label for="image_path" class="col-md-4 col-form-label text-md-right">プロフィール画像</label>
 
                             <div class="col-md-6">
-                                <input id="image_path" type="file" class="form-control @error('image_path') is-invalid @enderror" name="image_path" accept=".png, .jpg, .jpeg" required autocomplete="image_path" autofocus>
+                                <input id="image_path" type="file" class="form-control @error('image_path') is-invalid @enderror" name="image_path"  value="{{ Auth::user()->image_path }}" accept=".png, .jpg, .jpeg" required autocomplete="image_path" autofocus>
 
                                     <span class="invalid-feedback" role="alert">
                                         <strong></strong>
@@ -96,7 +96,7 @@
                               <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
   
                               <div class="col-md-6">
-                                  <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                                  <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password"  value="{{ Auth::user()->password }}" required autocomplete="new-password">
   
                                       <span class="invalid-feedback" role="alert">
                                           <strong></strong>

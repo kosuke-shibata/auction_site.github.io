@@ -10,7 +10,11 @@
         <div class="detail_text">
           <h2 class="detail_title">{{ $work->title }}</h2>
           <p class="price">¥{{ $work->price }}</p>
-          <button class="btn">カートに入れる</button>
+           @if(Auth::check())
+          <button class="btn" href="/cart"><a href="/cart">カートに入れる</a></button>
+          @else
+          <button class="btn"><a href="/login">カートに入れる</a></button>
+          @endif
           <p class="detail_message">{{ $work->body }}</p>
         </div>
       </div>

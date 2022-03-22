@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class WorkFile extends Model
 {
     protected $fillable = [
-        'file', 'work_id' 
+        'file_path', 'work_id' 
     ];
 
     public function work() {
