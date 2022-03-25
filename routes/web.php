@@ -26,6 +26,12 @@ Route::get('/create/{work}', 'TransactionController@display');
 Route::get('/profile/{user}', 'TransactionController@profile');
 
 Route::get('/edit', 'TransactionController@edit');
+
+// Route::get('/register', 'RegisterController@__construct');
+
+// Route::post('/register', 'RegisterController@store');
+
 Auth::routes();
+
 
 Route::get('/home', 'HomeController@index')->name('home');

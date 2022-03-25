@@ -213,12 +213,16 @@ body main #work_detail .detail_text .price {
 }
 
 body main #work_detail .detail_text .btn {
+  text-align: center;
+  display: block;
   margin-top: 20px;
+  font-size: 14px;
   width: 150px;
   height: 40px;
   line-height: 40px;
   border-radius: 50px;
-  border: none;
+  text-decoration: none;
+  color: #000;
   background: #ebeb00;
   box-shadow: 1px 1px 3px #a3a3a3;
 }
@@ -308,6 +312,7 @@ body main #display_block dl dd img {
   width: 300px;
 }
 
+body main .edit,
 body main .return {
   display: block;
   text-align: right;

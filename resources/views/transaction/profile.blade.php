@@ -9,7 +9,11 @@
       @endif
       <div class="profile_text">
         <div class="profile_image">
+          @if ($user->image_path == null)
+          <img src="https://auctionworksbucket.s3.ap-northeast-1.amazonaws.com/public/images/profile_image.png" alt="">
+          @else
           <img src="{{ $user->image_path }}" alt="">
+          @endif
         </div>
         <div class="profile_message">
           <dl>
@@ -29,7 +33,7 @@
         <div class="profile_blocks">
           @foreach ($works as $work)
           <div class="profile_block">
-            <a href="/item/{{ $work->id }}"><img src="{{ $work->image_path }}" alt=""></a>
+            <a href="/create/{{ $work->id }}"><img src="{{ $work->image_path }}" alt=""></a>
           </div>
           @endforeach
         </div>

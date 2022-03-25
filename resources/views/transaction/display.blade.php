@@ -13,7 +13,6 @@
           <dd><img src="{{ $work->image_path }}" alt=""></dd>
           <dt>ファイル:</dt>
           <dd><a href="{{ $work_file->file_path }}">{{ $work_file->file_path }}</a></dd>
-
         </dl>
       </section>
       <a class="edit" href="/create/edit">編集する</a>

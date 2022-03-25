@@ -11,7 +11,7 @@
           <h2 class="detail_title">{{ $work->title }}</h2>
           <p class="price">¥{{ $work->price }}</p>
            @if(Auth::check())
-          <button class="btn" href="/cart"><a href="/cart">カートに入れる</a></button>
+          <a class="btn" href="/cart">カートに入れる</a>
           @else
           <button class="btn"><a href="/login">カートに入れる</a></button>
           @endif

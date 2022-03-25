@@ -81,7 +81,8 @@ class TransactionController extends Controller
     }
     
     public function profile(User $user, Work $work) {
-        return view('transaction/profile')->with(['user' => $user])->with(['works' => $work->get()]);
+        // dd($work);
+        return view('transaction/profile')->with(['user' => $user])->with(['works' => $work->where('user_id', $user->id)->get()]);
     }
     
     public function edit(User $user) {

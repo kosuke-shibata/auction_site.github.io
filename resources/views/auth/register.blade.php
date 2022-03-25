@@ -6,11 +6,18 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('新規登録') }}</div>
-
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
                         @csrf
-
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('名前') }}</label>
 
@@ -43,7 +50,7 @@
                             <label for="introduce" class="col-md-4 col-form-label text-md-right">{{ __('自己紹介') }}</label>
 
                             <div class="col-md-6">
-                                <textarea id="introduce" type="text" class="form-control intro  @error('introduce') is-invalid @enderror" name="introduce" value="{{ old('introduce') }}" required autocomplete="off"></textarea>
+                                <textarea id="introduce" type="text" class="form-control intro  @error('introduce') is-invalid @enderror" name="introduce"  required autocomplete="off">{{ old('introduce') }}</textarea>
 
                                 @error('introduce')
                                     <span class="invalid-feedback" role="alert">
@@ -57,7 +64,7 @@
                             <label for="image_path" class="col-md-4 col-form-label text-md-right">{{ __('プロフィール画像') }}</label>
 
                             <div class="col-md-6">
-                                <input id="image_path" type="file" class="form-control @error('image_path') is-invalid @enderror" name="image_path" value="https://auctionworksbucket.s3.ap-northeast-1.amazonaws.com/public/images/profile_image.png" autocomplete="off">
+                                <input id="image_path" type="file" class="form-control @error('image_path') is-invalid @enderror" name="image_path"  value="{{ old('image_path') }}" autocomplete="off">
 
                                 @error('')
                                     <span class="invalid-feedback" role="alert">
