@@ -10,7 +10,8 @@
     <title>first item</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/app.js') }}" defer type=module></script>
+    <script src="{{ asset('js/jquery.js') }}" defer type=module></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">

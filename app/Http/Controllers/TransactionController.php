@@ -80,12 +80,36 @@ class TransactionController extends Controller
         return view('transaction/display')->with(['work' => $work, 'work_file' => $work_file->where('work_id', $work->id)->first()]);
     }
     
+    public function myprofile() {
+        return view('transaction/myprofile');
+    }
+    
     public function profile(User $user, Work $work) {
         // dd($work);
         return view('transaction/profile')->with(['user' => $user])->with(['works' => $work->where('user_id', $user->id)->get()]);
     }
     
+    public function cart() {
+        return view('transaction/cart');
+    }
+    
+    public function order() {
+        return view('transaction/order');
+    }
+    
+    public function order_decision() {
+        return view('transaction/order_decision');
+    }
+    
     public function edit(User $user) {
         return view('transaction/edit')->with(['user' => $user]);
+    }
+    
+    public function edit_credit() {
+        return view('transaction/edit_credit');
+    }
+    
+    public function edit_login() {
+        return view('transaction/edit_email&password');
     }
 }

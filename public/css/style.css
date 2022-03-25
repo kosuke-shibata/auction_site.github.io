@@ -3,6 +3,24 @@
   padding: 0;
 }
 
+h2 {
+  font-size: 40px;
+  padding-top: 30px;
+}
+
+.btn {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  text-decoration: none;
+  color: #000;
+  background: #ebeb00;
+  box-shadow: 1px 1px 3px #a3a3a3;
+}
+
 body {
   background: #f8fff8;
 }
@@ -66,11 +84,11 @@ body #app header .menu-command .nav li a img {
   width: 50%;
 }
 
-body main {
+body #app main {
   margin-top: 100px;
 }
 
-body main #works_block {
+body #app main #works_block {
   margin: 0 auto;
   padding-top: 200px;
   width: 70%;
@@ -79,29 +97,29 @@ body main #works_block {
   flex-wrap: wrap;
 }
 
-body main #works_block .work_block {
+body #app main #works_block .work_block {
   margin: 30px 20px 50px;
   box-shadow: 3px 3px 5px #e7e7e7;
   width: 250px;
 }
 
-body main #works_block .work_block a {
+body #app main #works_block .work_block a {
   text-decoration: none;
   color: #000;
 }
 
-body main #works_block .work_block a img {
+body #app main #works_block .work_block a img {
   width: 250px;
   height: 250px;
   vertical-align: middle;
 }
 
-body main #works_block .work_block a .work_info {
+body #app main #works_block .work_block a .work_info {
   background: #fff;
   font-size: 14px;
 }
 
-body main #works_block .work_block a .work_info h2 {
+body #app main #works_block .work_block a .work_info h3 {
   padding: 10px 0 0 10px;
   font-weight: 100;
   white-space: nowrap;
@@ -109,68 +127,21 @@ body main #works_block .work_block a .work_info h2 {
   text-overflow: ellipsis;
 }
 
-body main #works_block .work_block a .work_info p {
+body #app main #works_block .work_block a .work_info p {
   padding: 20px;
   padding-left: 70%;
 }
 
-body main #paginate {
+body #app main #paginate {
   padding: 30px;
   text-align: center;
 }
 
-body main #paginate .example li {
+body #app main #paginate .example li {
   display: inline;
 }
 
-body main #contact {
-  background: #636363;
-  padding-top: 50px;
-}
-
-body main #contact .form {
-  width: 70%;
-  margin: 0 auto;
-  color: #f3f3f3;
-}
-
-body main #contact .form h3 {
-  font-size: 40px;
-}
-
-body main #contact .form form {
-  width: 700px;
-  padding: 10px;
-}
-
-body main #contact .form form input {
-  margin-bottom: 20px;
-}
-
-body main #contact .form form input.name {
-  width: 500px;
-  height: 24px;
-}
-
-body main #contact .form form input.mail {
-  width: 500px;
-  height: 24px;
-}
-
-body main #contact .form form input.submit {
-  margin-top: -35px;
-  display: block;
-  margin-left: auto;
-  width: 80px;
-  height: 30px;
-}
-
-body main #contact .form form textarea {
-  width: 600px;
-  height: 100px;
-}
-
-body main #work_detail {
+body #app main #work_detail {
   display: flex;
   justify-content: space-between;
   width: 80%;
@@ -178,16 +149,16 @@ body main #work_detail {
   padding-top: 100px;
 }
 
-body main #work_detail .detail_img {
+body #app main #work_detail .detail_img {
   width: 50%;
   margin-bottom: 100px;
 }
 
-body main #work_detail .detail_img img {
+body #app main #work_detail .detail_img img {
   width: 90%;
 }
 
-body main #work_detail .detail_img .worker {
+body #app main #work_detail .detail_img .worker {
   display: block;
   padding: 20px;
   text-decoration: underline;
@@ -195,106 +166,95 @@ body main #work_detail .detail_img .worker {
   color: #000;
 }
 
-body main #work_detail .detail_text {
+body #app main #work_detail .detail_text {
   width: 50%;
   overflow-wrap: break-word;
   margin-bottom: 100px;
 }
 
-body main #work_detail .detail_text .detail_title {
+body #app main #work_detail .detail_text .detail_title {
   margin-top: 20px;
   font-size: 3vw;
 }
 
-body main #work_detail .detail_text .price {
+body #app main #work_detail .detail_text .price {
   margin-top: 40px;
   font-size: 2vw;
   color: #ad0000;
 }
 
-body main #work_detail .detail_text .btn {
-  text-align: center;
-  display: block;
-  margin-top: 20px;
-  font-size: 14px;
-  width: 150px;
-  height: 40px;
-  line-height: 40px;
+body #app main #work_detail .detail_text .btn {
   border-radius: 50px;
-  text-decoration: none;
-  color: #000;
+  display: block;
   background: #ebeb00;
-  box-shadow: 1px 1px 3px #a3a3a3;
 }
 
-body main #work_detail .detail_text .detail_message {
+body #app main #work_detail .detail_text .detail_message {
   margin-top: 20px;
   width: 100%;
 }
 
-body main .container {
+body #app main .container {
   width: 40%;
   margin: 200px auto 0;
   border-radius: 5%;
 }
 
-body main .container .row.justify-content-center .col-md-8 .card .card-header {
+body #app main .container .row.justify-content-center .col-md-8 .card .card-header {
   padding-top: 20px;
   font-size: 36px;
 }
 
-body main .container .row.justify-content-center .col-md-8 .card .card-body {
+body #app main .container .row.justify-content-center .col-md-8 .card .card-body {
   width: 100%;
   margin: 20px auto;
 }
 
-body main .container .row.justify-content-center .col-md-8 .card .card-body form .form-group.row {
+body #app main .container .row.justify-content-center .col-md-8 .card .card-body form .form-group.row {
   padding-bottom: 20px;
 }
 
-body main .container .row.justify-content-center .col-md-8 .card .card-body form .form-group.row .col-md-4 {
+body #app main .container .row.justify-content-center .col-md-8 .card .card-body form .form-group.row .col-md-4 {
   font-size: 20px;
 }
 
-body main .container .row.justify-content-center .col-md-8 .card .card-body form .form-group.row .col-md-6 #work_image,
-body main .container .row.justify-content-center .col-md-8 .card .card-body form .form-group.row .col-md-6 #work_file,
-body main .container .row.justify-content-center .col-md-8 .card .card-body form .form-group.row .col-md-6 #image_path {
+body #app main .container .row.justify-content-center .col-md-8 .card .card-body form .form-group.row .col-md-6 #work_image,
+body #app main .container .row.justify-content-center .col-md-8 .card .card-body form .form-group.row .col-md-6 #image_path {
   border: none;
 }
 
-body main .container .row.justify-content-center .col-md-8 .card .card-body form .form-group.row .col-md-6 .form-control {
+body #app main .container .row.justify-content-center .col-md-8 .card .card-body form .form-group.row .col-md-6 .form-control {
   width: 100%;
   height: 40px;
   line-height: 18px;
   border: 1px solid;
 }
 
-body main .container .row.justify-content-center .col-md-8 .card .card-body form .form-group.row .col-md-6 .form-control.intro {
+body #app main .container .row.justify-content-center .col-md-8 .card .card-body form .form-group.row .col-md-6 .form-control.intro {
   height: 100px;
 }
 
-body main .container .row.justify-content-center .col-md-8 .card .card-body form .form-group.row.mb-0 {
+body #app main .container .row.justify-content-center .col-md-8 .card .card-body form .form-group.row.mb-0 {
   text-align: right;
 }
 
-body main .container .row.justify-content-center .col-md-8 .card .card-body form .form-group.row.mb-0 .offset-md-4 .btn {
-  width: 100px;
-  height: 40px;
+body #app main .container .row.justify-content-center .col-md-8 .card .card-body form .form-group.row.mb-0 .offset-md-4 .btn {
   background: #009b00;
   font-size: 20px;
   color: #f0f0f0;
   border: none;
-  box-shadow: 1px 1px 5px #414141;
+  text-decoration: none;
 }
 
-body main .container .row.justify-content-center .col-md-8 .card .card-body form .form-group.row.mb-0 .offset-md-4 .btn.btn-link {
+body #app main .container .row.justify-content-center .col-md-8 .card .card-body form .form-group.row.mb-0 .offset-md-4 .btn.btn-link {
   background: none;
   color: #000;
   box-shadow: none;
   padding-left: 20px;
+  border-radius: none;
 }
 
-body main #display_block {
+body #app main #display_block {
   width: 60%;
   margin: 0 auto;
   padding-top: 100px;
@@ -302,18 +262,17 @@ body main #display_block {
   font-size: 24px;
 }
 
-body main #display_block dl dd {
+body #app main #display_block dl dd {
   padding-left: 150px;
   margin-top: -36px;
   margin-bottom: 50px;
 }
 
-body main #display_block dl dd img {
+body #app main #display_block dl dd img {
   width: 300px;
 }
 
-body main .edit,
-body main .return {
+body #app main .return {
   display: block;
   text-align: right;
   padding-right: 200px;
@@ -322,17 +281,12 @@ body main .return {
   color: #000;
 }
 
-body main #profile_info {
+body #app main #profile_info {
   width: 80%;
   margin: 0 auto;
 }
 
-body main #profile_info h2 {
-  font-size: 40px;
-  padding-top: 30px;
-}
-
-body main #profile_info .edit {
+body #app main #profile_info .edit {
   display: block;
   text-align: right;
   padding-bottom: 20px;
@@ -340,62 +294,404 @@ body main #profile_info .edit {
   color: #000;
 }
 
-body main #profile_info .profile_text {
+body #app main #profile_info .profile_text {
   display: flex;
   justify-content: space-between;
+  overflow-wrap: break-word;
   padding-top: 100px;
 }
 
-body main #profile_info .profile_text .profile_image {
+body #app main #profile_info .profile_text .profile_image {
   width: 50%;
 }
 
-body main #profile_info .profile_text .profile_image img {
+body #app main #profile_info .profile_text .profile_image img {
   width: 80%;
 }
 
-body main #profile_info .profile_text .profile_message {
-  width: 50%;
+body #app main #profile_info .profile_text .profile_message {
+  width: 45%;
   font-size: 24px;
 }
 
-body main #profile_info .profile_text .profile_message dl dd {
+body #app main #profile_info .profile_text .profile_message dl dd {
   margin: -36px auto 30px 200px;
 }
 
-body main #profile_info .profile_works,
-body main #profile_info .profile_purchase_histories {
+body #app main #profile_info .profile_works,
+body #app main #profile_info .profile_purchase_histories {
   margin: 50px auto;
 }
 
-body main #profile_info .profile_works h3,
-body main #profile_info .profile_purchase_histories h3 {
+body #app main #profile_info .profile_works h3,
+body #app main #profile_info .profile_purchase_histories h3 {
   font-size: 30px;
 }
 
-body main #profile_info .profile_works .profile_blocks,
-body main #profile_info .profile_purchase_histories .profile_blocks {
+body #app main #profile_info .profile_works .profile_blocks,
+body #app main #profile_info .profile_purchase_histories .profile_blocks {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   padding-top: 100px;
 }
 
-body main #profile_info .profile_works .profile_blocks .profile_block,
-body main #profile_info .profile_purchase_histories .profile_blocks .profile_block {
-  width: 30%;
+body #app main #profile_info .profile_works .profile_blocks .profile_block,
+body #app main #profile_info .profile_purchase_histories .profile_blocks .profile_block {
+  width: 250px;
+  margin: 30px 20px 50px;
 }
 
-body main #profile_info .profile_works .profile_blocks .profile_block img,
-body main #profile_info .profile_purchase_histories .profile_blocks .profile_block img {
+body #app main #profile_info .profile_works .profile_blocks .profile_block img,
+body #app main #profile_info .profile_purchase_histories .profile_blocks .profile_block img {
   width: 100%;
 }
 
-body footer {
+body #app main #cart_info,
+body #app main #order_info {
+  width: 80%;
+  margin: 0 auto;
+}
+
+body #app main #cart_info .cart_text,
+body #app main #cart_info .order_text,
+body #app main #order_info .cart_text,
+body #app main #order_info .order_text {
+  padding: 20px 0 50px;
+  font-size: 24px;
+  border-bottom: 5px solid #00005a;
+}
+
+body #app main #cart_info .cart_text span,
+body #app main #cart_info .order_text span,
+body #app main #order_info .cart_text span,
+body #app main #order_info .order_text span {
+  color: #f00;
+  font-size: 18px;
+}
+
+body #app main #cart_info .cart_img,
+body #app main #order_info .cart_img {
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 200px;
+}
+
+body #app main #cart_info .cart_img img,
+body #app main #order_info .cart_img img {
+  width: 300px;
+}
+
+body #app main #cart_info .cart_detail_text table,
+body #app main #cart_info .order_detail_text table,
+body #app main #order_info .cart_detail_text table,
+body #app main #order_info .order_detail_text table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+body #app main #cart_info .cart_detail_text table thead,
+body #app main #cart_info .order_detail_text table thead,
+body #app main #order_info .cart_detail_text table thead,
+body #app main #order_info .order_detail_text table thead {
+  background: #009b00;
+  color: #f0f0f0;
+  height: 50px;
+}
+
+body #app main #cart_info .cart_detail_text table thead tr th,
+body #app main #cart_info .order_detail_text table thead tr th,
+body #app main #order_info .cart_detail_text table thead tr th,
+body #app main #order_info .order_detail_text table thead tr th {
+  border-left: 2px solid #929292;
+  border-right: 2px solid #929292;
+}
+
+body #app main #cart_info .cart_detail_text table tbody,
+body #app main #cart_info .order_detail_text table tbody,
+body #app main #order_info .cart_detail_text table tbody,
+body #app main #order_info .order_detail_text table tbody {
+  height: 50px;
+}
+
+body #app main #cart_info .cart_detail_text table tbody tr,
+body #app main #cart_info .order_detail_text table tbody tr,
+body #app main #order_info .cart_detail_text table tbody tr,
+body #app main #order_info .order_detail_text table tbody tr {
+  text-align: center;
+}
+
+body #app main #cart_info .cart_detail_text table tbody tr td,
+body #app main #cart_info .order_detail_text table tbody tr td,
+body #app main #order_info .cart_detail_text table tbody tr td,
+body #app main #order_info .order_detail_text table tbody tr td {
+  border: 2px solid #929292;
+}
+
+body #app main #cart_info .cart_detail_text dl,
+body #app main #cart_info .order_detail_text dl,
+body #app main #order_info .cart_detail_text dl,
+body #app main #order_info .order_detail_text dl {
+  padding-top: 50px;
+}
+
+body #app main #cart_info .cart_detail_text dl dd,
+body #app main #cart_info .order_detail_text dl dd,
+body #app main #order_info .cart_detail_text dl dd,
+body #app main #order_info .order_detail_text dl dd {
+  padding-bottom: 20px;
+}
+
+body #app main #cart_info .cart_detail_text dl dd a,
+body #app main #cart_info .order_detail_text dl dd a,
+body #app main #order_info .cart_detail_text dl dd a,
+body #app main #order_info .order_detail_text dl dd a {
+  color: #f00;
+}
+
+body #app main #cart_info .cart_detail_text .cart_btn,
+body #app main #cart_info .order_detail_text .cart_btn,
+body #app main #order_info .cart_detail_text .cart_btn,
+body #app main #order_info .order_detail_text .cart_btn {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 50px auto 200px;
+}
+
+body #app main #cart_info .cart_detail_text .cart_btn .btn,
+body #app main #cart_info .order_detail_text .cart_btn .btn,
+body #app main #order_info .cart_detail_text .cart_btn .btn,
+body #app main #order_info .order_detail_text .cart_btn .btn {
+  display: inline-block;
+  border-radius: 0px;
+}
+
+body #app footer {
   text-align: center;
   background: #000;
   color: #fff;
   height: 40px;
   line-height: 40px;
+}
+
+@media (max-width: 650px) {
+  body #app header {
+    height: 70px;
+  }
+
+  body #app header h1 {
+    padding-left: 30px;
+    width: 100%;
+  }
+
+  body #app header h1 a img {
+    height: 55px;
+  }
+
+  body #app header .menu-command {
+    margin-right: 50px;
+  }
+
+  body #app header .menu-command .menu-button {
+    display: block;
+    margin-top: 15px;
+    overflow: hidden;
+    width: 50px;
+    height: 40px;
+    outline: none !important;
+    background: unset;
+    border: none;
+    cursor: pointer;
+  }
+
+  body #app header .menu-command .menu-button > span {
+    background: #000;
+    width: 40px;
+    height: 4px;
+    display: block;
+    margin-bottom: 10px;
+    transition: transform 0.4s;
+    border-radius: 20px;
+  }
+
+  body #app header .menu-command .menu-button > span:last-child {
+    margin-bottom: 0;
+  }
+
+  body #app header .menu-command .nav {
+    display: none;
+    font-size: 14px;
+    flex-flow: column;
+    margin-top: 160px;
+  }
+
+  body #app header .menu-command .nav li {
+    background: #f8fff8;
+    width: 100px;
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 1px solid #000;
+  }
+
+  body #app header .menu-command .nav li a {
+    padding-right: 30px;
+    font-weight: normal;
+  }
+
+  body #app header .menu-command .nav li a img {
+    vertical-align: middle;
+    margin-top: 0;
+    width: 40%;
+  }
+
+  body #app header .menu-command.menu-open {
+    margin-right: 0px;
+  }
+
+  body #app header .menu-command.menu-open .menu-button > span:nth-child(1) {
+    transform: translateY(14px) rotate(135deg);
+  }
+
+  body #app header .menu-command.menu-open .menu-button > span:nth-child(2) {
+    transform: translateX(-18px) scale(0);
+  }
+
+  body #app header .menu-command.menu-open .menu-button > span:nth-child(3) {
+    transform: translateY(-14px) rotate(-135deg);
+  }
+
+  body #app header .menu-command.menu-open .nav {
+    position: relative;
+    display: flex !important;
+    background: #f8fff8;
+    vertical-align: top;
+  }
+
+  body #app header .menu-command.menu-open .nav li {
+    border-right: 0;
+  }
+
+  body #app header .menu-command.menu-open .nav li a {
+    padding-right: 0;
+    position: static;
+  }
+
+  body #app main {
+    margin-top: 70px;
+  }
+
+  body #app main #work_detail {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 100px;
+  }
+
+  body #app main #work_detail .detail_img {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  body #app main #work_detail .detail_img .worker {
+    padding: 20px;
+    text-decoration: underline;
+    font-size: 20px;
+  }
+
+  body #app main #work_detail .detail_text {
+    width: 90%;
+    overflow-wrap: break-word;
+    margin-bottom: 100px;
+  }
+
+  body #app main #work_detail .detail_text .detail_title {
+    margin-top: 20px;
+    font-size: 24px;
+  }
+
+  body #app main #work_detail .detail_text .price {
+    margin-top: 40px;
+    font-size: 20px;
+    color: #ad0000;
+  }
+
+  body #app main #work_detail .detail_text .btn {
+    border-radius: 50px;
+    display: block;
+    background: #ebeb00;
+  }
+
+  body #app main #work_detail .detail_text .detail_message {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  body #app main #profile_info {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  body #app main #profile_info .edit {
+    display: block;
+    text-align: right;
+    padding-bottom: 20px;
+    font-size: 20px;
+    color: #000;
+  }
+
+  body #app main #profile_info .profile_text {
+    display: block;
+    padding-top: 100px;
+  }
+
+  body #app main #profile_info .profile_text .profile_image {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  body #app main #profile_info .profile_text .profile_message {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 24px;
+  }
+
+  body #app main #profile_info .profile_text .profile_message dl {
+    margin-top: 30px;
+    font-size: 20px;
+  }
+
+  body #app main #profile_info .profile_text .profile_message dl dd {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  body #app main #profile_info .profile_works,
+  body #app main #profile_info .profile_purchase_histories {
+    margin: 50px auto;
+  }
+
+  body #app main #profile_info .profile_works h3,
+  body #app main #profile_info .profile_purchase_histories h3 {
+    font-size: 30px;
+  }
+
+  body #app main #profile_info .profile_works .profile_blocks,
+  body #app main #profile_info .profile_purchase_histories .profile_blocks {
+    display: block;
+    padding-top: 100px;
+  }
+
+  body #app main #profile_info .profile_works .profile_blocks .profile_block,
+  body #app main #profile_info .profile_purchase_histories .profile_blocks .profile_block {
+    width: 250px;
+    margin: 0 auto 70px;
+  }
+
+  body #app main #profile_info .profile_works .profile_blocks .profile_block img,
+  body #app main #profile_info .profile_purchase_histories .profile_blocks .profile_block img {
+    width: 100%;
+  }
 }
 
 

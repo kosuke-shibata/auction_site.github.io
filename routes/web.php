@@ -23,13 +23,21 @@ Route::post('/create', 'TransactionController@store');
 
 Route::get('/create/{work}', 'TransactionController@display');
 
+Route::get('/myprofile/{user}', 'TransactionController@myprofile');
+
 Route::get('/profile/{user}', 'TransactionController@profile');
+
+Route::get('/cart', 'TransactionController@cart');
+
+Route::get('/order', 'TransactionController@order');
+
+Route::post('/order', 'TransactionController@order_decision');
 
 Route::get('/edit', 'TransactionController@edit');
 
-// Route::get('/register', 'RegisterController@__construct');
+Route::get('/edit/credit', 'TransactionController@edit_credit');
 
-// Route::post('/register', 'RegisterController@store');
+Route::get('/edit/login', 'TransactionController@edit_login');
 
 Auth::routes();
 
