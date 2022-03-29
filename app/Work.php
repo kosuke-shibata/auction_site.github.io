@@ -14,7 +14,7 @@ class Work extends Model
     }
     
     protected $fillable = [
-        'title', 'body', 'price', 'image_path', 'user_id'    
+        'title', 'body', 'price', 'image_path', 'user_id', 'file_path'    
     ];
     
     
@@ -23,16 +23,16 @@ class Work extends Model
     }
     
     
-    public function work_files() {
-        return $this->hasMany('App\WorkFile');
-    }
+    // public function work_files() {
+    //     return $this->hasMany('App\WorkFile');
+    // }
     
     public function order() {
         return $this->hasOne('App\Order');
     }
     
     public function cart() {
-        return $this->hasOne('App\Cart');
+        return $this->hasMany('App\Cart');
     }
     
     public function purchase_history() {

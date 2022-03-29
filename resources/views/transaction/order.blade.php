@@ -7,11 +7,11 @@
   <div class="order_detail_text">
     <dl>
       <dt>お名前：</dt>
-      <dd>〇〇〇〇</dd>
+      <dd>{{ $order->user->name }}</dd>
       <dt>Eメールアドレス：</dt>
-      <dd>〇〇〇〇@gmail.com</dd>
+      <dd>{{ $order->user->email }}</dd>
       <dt>クレジットカード：</dt>
-      <dd>123456789　<a href="credit_edit.html">※なければこちらからご登録お願いします。</a>
+      <dd>{{ $order->user->credit }}<a href="/myprofile/{{ $order->user->id }}/edit_credit"><span>※なければこちらからご登録お願いします。</span></a>
         </dd>
     </dl>
     <h3>注文一覧</h3>
@@ -20,23 +20,20 @@
         <tr>
           <th>商品名</th>
           <th>価格</th>
-          <th>数量</th>
-          <th>合計</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>〇〇〇〇</td>
-          <td>¥０</td>
-          <td>１</td>
-          <td>¥０</td>
+          <td>{{ $order->work->title }}</td>
+          <td>¥{{ $order->work->price }}</td>
         </tr>
       </tbody>
     </table>
-    <div class="cart_btn">
-      <a class="btn" href="cart.html">戻る</a>     
-      <a class="btn" href="order_decision.html">購入を決定</a>     
-    </div>
+    <form class="cart_btn" method="POST" action="/order/{{ $order->user_id }}"  enctype="multipart/form-data">
+      @csrf
+      <a class="btn" href="/cart/{{ $order->user->id }}">戻る</a>     
+      <button type="submit"><a class="btn">購入を決定</a></button>
+    </form>
   </div>
 </div>
 @endsection

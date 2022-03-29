@@ -82,6 +82,10 @@ body #app header .menu-command .nav li a:hover {
 body #app header .menu-command .nav li a img {
   margin-top: 25px;
   width: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0 0;
+     object-position: 0 0;
 }
 
 body #app main {
@@ -112,6 +116,10 @@ body #app main #works_block .work_block a img {
   width: 250px;
   height: 250px;
   vertical-align: middle;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0 0;
+     object-position: 0 0;
 }
 
 body #app main #works_block .work_block a .work_info {
@@ -156,6 +164,10 @@ body #app main #work_detail .detail_img {
 
 body #app main #work_detail .detail_img img {
   width: 90%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0 0;
+     object-position: 0 0;
 }
 
 body #app main #work_detail .detail_img .worker {
@@ -187,6 +199,11 @@ body #app main #work_detail .detail_text .btn {
   border-radius: 50px;
   display: block;
   background: #ebeb00;
+}
+
+body #app main #work_detail .detail_text .btn a {
+  text-decoration: none;
+  color: #000;
 }
 
 body #app main #work_detail .detail_text .detail_message {
@@ -270,6 +287,10 @@ body #app main #display_block dl dd {
 
 body #app main #display_block dl dd img {
   width: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0 0;
+     object-position: 0 0;
 }
 
 body #app main .return {
@@ -307,6 +328,10 @@ body #app main #profile_info .profile_text .profile_image {
 
 body #app main #profile_info .profile_text .profile_image img {
   width: 80%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0 0;
+     object-position: 0 0;
 }
 
 body #app main #profile_info .profile_text .profile_message {
@@ -345,6 +370,10 @@ body #app main #profile_info .profile_purchase_histories .profile_blocks .profil
 body #app main #profile_info .profile_works .profile_blocks .profile_block img,
 body #app main #profile_info .profile_purchase_histories .profile_blocks .profile_block img {
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0 0;
+     object-position: 0 0;
 }
 
 body #app main #cart_info,
@@ -380,6 +409,11 @@ body #app main #order_info .cart_img {
 body #app main #cart_info .cart_img img,
 body #app main #order_info .cart_img img {
   width: 300px;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0 0;
+     object-position: 0 0;
 }
 
 body #app main #cart_info .cart_detail_text table,
@@ -440,13 +474,34 @@ body #app main #cart_info .order_detail_text dl dd,
 body #app main #order_info .cart_detail_text dl dd,
 body #app main #order_info .order_detail_text dl dd {
   padding-bottom: 20px;
+  overflow-wrap: break-word;
 }
 
 body #app main #cart_info .cart_detail_text dl dd a,
 body #app main #cart_info .order_detail_text dl dd a,
 body #app main #order_info .cart_detail_text dl dd a,
 body #app main #order_info .order_detail_text dl dd a {
+  color: #000;
+  text-decoration: none;
+}
+
+body #app main #cart_info .cart_detail_text dl dd a span,
+body #app main #cart_info .order_detail_text dl dd a span,
+body #app main #order_info .cart_detail_text dl dd a span,
+body #app main #order_info .order_detail_text dl dd a span {
   color: #f00;
+}
+
+body #app main #cart_info .cart_detail_text dl dd img,
+body #app main #cart_info .order_detail_text dl dd img,
+body #app main #order_info .cart_detail_text dl dd img,
+body #app main #order_info .order_detail_text dl dd img {
+  width: 300px;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0 0;
+     object-position: 0 0;
 }
 
 body #app main #cart_info .cart_detail_text .cart_btn,

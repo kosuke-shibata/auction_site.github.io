@@ -6,6 +6,15 @@
     <div class="col-md-8">
         <div class="card">
             <div class="card-header">出品</div>
+            @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
             <div class="card-body">
                 <form method="POST" action="/create"  enctype="multipart/form-data">
                   @csrf
@@ -58,7 +67,7 @@
                     <div class="form-group row">
                         <label for="body" class="col-md-4 col-form-label text-md-right">{{ __('商品説明:') }}</label>
                         <div class="col-md-6">
-                            <textarea id="body" type="text" class="form-control intro @error('body') is-invalid @enderror" name="work[body]" value="{{ old('work.body') }}" required autocomplete="off"></textarea>
+                            <textarea id="body" type="text" class="form-control intro @error('body') is-invalid @enderror" name="work[body]"  required autocomplete="off">{{ old('work.body') }}</textarea>
 
                               @error('body')
                                 <span class="invalid-feedback" role="alert">
@@ -83,12 +92,12 @@
                     </div>
                     
                     <div class="form-group row">
-                      <label for="work_file" class="col-md-4 col-form-label text-md-right">{{ __('ファイル:') }}</label>
+                      <label for="work_file" class="col-md-4 col-form-label text-md-right">{{ __('ファイル (Githubなど):') }}</label>
 
                       <div class="col-md-6">
-                          <input id="work_file" type="file" class="form-control @error('work_file') is-invalid @enderror" name="file_path" multiple required autocomplete="work_file" autofocus>
+                          <input id="work_file" type="text" class="form-control @error('work_file') is-invalid @enderror" name="work[file_path]" value="{{ old('work.file_path') }}" multiple required autocomplete="work_file" autofocus>
 
-                              @error('work_image')
+                              @error('work_file')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>

@@ -10,10 +10,13 @@
   <div class="detail_text">
     <h2 class="detail_title">{{ $work->title }}</h2>
     <p class="price">¥{{ $work->price }}</p>
-     @if(Auth::check())
-    <a class="btn" href="/cart">カートに入れる</a>
+    @if(Auth::check())
+    <form method="POST" action="/item/{{ $work->id }}"  enctype="multipart/form-data">
+      @csrf
+      <button type="submit" class="btn">カートに入れる</button>
+    </from>
     @else
-    <button class="btn"><a href="/login">カートに入れる</a></button>
+      <button class="btn"><a href="/login">カートに入れる</a></button>
     @endif
     <p class="detail_message">{{ $work->body }}</p>
   </div>

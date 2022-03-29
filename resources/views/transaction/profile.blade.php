@@ -3,10 +3,6 @@
 @section('content')
 <section id="profile_info">
   <h2>プロフィール</h2>
-  @if(Auth::check())
-  <a class="edit" href="/edit">編集する</a>
-  @else
-  @endif
   <div class="profile_text">
     <div class="profile_image">
       @if ($user->image_path == null)

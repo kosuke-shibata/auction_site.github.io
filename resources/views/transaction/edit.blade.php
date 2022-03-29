@@ -6,65 +6,77 @@
       <div class="col-md-8">
           <div class="card">
               <div class="card-header">プロフィール編集</div>
+              
               <div class="card-body">
-                  <form method="POST" action="/profile">
+                  <form method="POST" action="/profile/{{ $user->id }}/edit" enctype="multipart/form-data">
                     @csrf
+                    @method('PUT')
                       <div class="form-group row">
-                          <label for="name" class="col-md-4 col-form-label text-md-right">名前</label>
+                          <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('名前') }}<span>※必須</span></label>
 
                           <div class="col-md-6">
                               <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ Auth::user()->name }}" required autocomplete="name" autofocus>
 
-                                  <span class="invalid-feedback" role="alert">
-                                      <strong></strong>
-                                  </span>
+                                  @error('name')
+                                      <span class="invalid-feedback" role="alert">
+                                          <strong>{{ $message }}</strong>
+                                      </span>
+                                  @enderror
                           </div>
                       </div>
                       
                       <div class="form-group row">
-                        <label for="image_path" class="col-md-4 col-form-label text-md-right">プロフィール画像</label>
+                        <label for="image_path" class="col-md-4 col-form-label text-md-right">{{ __('プロフィール画像') }}</label>
 
                         <div class="col-md-6">
-                            <input id="image_path" type="file" class="form-control @error('image_path') is-invalid @enderror" name="image_path"  value="{{ Auth::user()->image_path }}" accept=".png, .jpg, .jpeg" required autocomplete="image_path" autofocus>
+                            <input id="image_path" type="file" class="form-control @error('image_path') is-invalid @enderror" name="image_path"  autocomplete="off">
 
-                                <span class="invalid-feedback" role="alert">
-                                    <strong></strong>
-                                </span>
+                                @error('image_path')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                         </div>
                       </div>
                       
                       <div class="form-group row">
-                          <label for="introduce" class="col-md-4 col-form-label text-md-right">自己紹介</label>
+                          <label for="introduce" class="col-md-4 col-form-label text-md-right">{{ __('自己紹介') }}<span>※必須</span></label>
                           <div class="col-md-6">
                               <textarea id="introduce" type="text" class="form-control intro @error('introduce') is-invalid @enderror" name="introduce"  required autocomplete="off">{{ Auth::user()->introduce }}</textarea>
 
-                                  <span class="invalid-feedback" role="alert">
-                                      <strong></strong>
-                                  </span>
+                                  @error('introduce')
+                                      <span class="invalid-feedback" role="alert">
+                                          <strong>{{ $message }}</strong>
+                                      </span>
+                                  @enderror
                           </div>
                       </div>
                       
                       <div class="form-group row">
-                          <label for="portfolio" class="col-md-4 col-form-label text-md-right">ポートフォリオ</label>
+                          <label for="portfolio" class="col-md-4 col-form-label text-md-right">{{ __('ポートフォリオ') }}</label>
 
                           <div class="col-md-6">
                               <input id="portfolio" type="text" class="form-control @error('portfolio') is-invalid @enderror" name="portfolio" value="{{ Auth::user()->portfolio }}" autocomplete="off">
 
-                                  <span class="invalid-feedback" role="alert">
-                                      <strong></strong>
-                                  </span>
+                                  @error('portfolio')
+                                      <span class="invalid-feedback" role="alert">
+                                          <strong>{{ $message }}</strong>
+                                      </span>
+                                  @enderror
                           </div>
                       </div>
                       
                       <div class="form-group row">
-                          <label for="sns" class="col-md-4 col-form-label text-md-right">SNS</label>
+                          <label for="sns" class="col-md-4 col-form-label text-md-right">{{ __('SNS') }}</label>
 
                           <div class="col-md-6">
                               <input id="sns" type="text" class="form-control @error('sns') is-invalid @enderror" name="sns" value="{{ Auth::user()->sns }}" autocomplete="off">
 
-                                  <span class="invalid-feedback" role="alert">
-                                      <strong></strong>
-                                  </span>
+                                  @error('sns')
+                                      <span class="invalid-feedback" role="alert">
+                                          <strong>{{ $message }}</strong>
+                                      </span>
+                                  @enderror
                           </div>
                       </div>
 

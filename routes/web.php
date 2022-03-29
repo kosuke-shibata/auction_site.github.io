@@ -17,6 +17,8 @@ Route::get('/', 'TransactionController@index');
 
 Route::get('/item/{work}', 'TransactionController@detail');
 
+Route::post('/item/{work}', 'TransactionController@cart_in');
+
 Route::get('/create', 'TransactionController@create');
 
 Route::post('/create', 'TransactionController@store');
@@ -27,17 +29,27 @@ Route::get('/myprofile/{user}', 'TransactionController@myprofile');
 
 Route::get('/profile/{user}', 'TransactionController@profile');
 
-Route::get('/cart', 'TransactionController@cart');
+Route::get('/cart/{user_id}', 'TransactionController@cart');
 
-Route::get('/order', 'TransactionController@order');
+Route::post('/cart/{user_id}', 'TransactionController@order_in');
 
-Route::post('/order', 'TransactionController@order_decision');
+Route::get('/order/{user_id}', 'TransactionController@order');
 
-Route::get('/edit', 'TransactionController@edit');
+Route::post('/order/{user_id}', 'TransactionController@order_decision_in');
 
-Route::get('/edit/credit', 'TransactionController@edit_credit');
+Route::get('/order/{user_id}/decision', 'TransactionController@order_decision');
 
-Route::get('/edit/login', 'TransactionController@edit_login');
+Route::get('/myprofile/{user}/edit', 'TransactionController@edit');
+
+Route::put('/myprofile/{user}/edit', 'TransactionController@update');
+
+Route::get('/myprofile/{user}/edit_credit', 'TransactionController@edit_credit');
+
+Route::put('/myprofile/{user}/edit_credit', 'TransactionController@update_credit');
+
+Route::get('/myprofile/{user}/edit_email&password', 'TransactionController@edit_login');
+
+Route::put('/myprofile/{user}/edit_email&password', 'TransactionController@update_login');
 
 Auth::routes();
 

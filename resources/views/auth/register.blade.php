@@ -19,7 +19,7 @@
                     <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('名前') }}</label>
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('名前') }}<span>※必須</span></label>
 
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
@@ -33,7 +33,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Eメールアドレス') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Eメールアドレス') }}<span>※必須</span></label>
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
@@ -47,7 +47,7 @@
                         </div>
                         
                         <div class="form-group row">
-                            <label for="introduce" class="col-md-4 col-form-label text-md-right">{{ __('自己紹介') }}</label>
+                            <label for="introduce" class="col-md-4 col-form-label text-md-right">{{ __('自己紹介') }}<span>※必須</span></label>
 
                             <div class="col-md-6">
                                 <textarea id="introduce" type="text" class="form-control intro  @error('introduce') is-invalid @enderror" name="introduce"  required autocomplete="off">{{ old('introduce') }}</textarea>
@@ -66,7 +66,7 @@
                             <div class="col-md-6">
                                 <input id="image_path" type="file" class="form-control @error('image_path') is-invalid @enderror" name="image_path"  value="{{ old('image_path') }}" autocomplete="off">
 
-                                @error('')
+                                @error('image_path')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -117,7 +117,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}<span>※必須</span></label>
 
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
@@ -131,7 +131,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}<span>※必須</span></label>
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
