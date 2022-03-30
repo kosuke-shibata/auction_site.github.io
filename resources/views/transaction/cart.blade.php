@@ -34,7 +34,7 @@
         <form class="cart_btn" method="POST" action="/cart/{{ $cart->user_id }}"  enctype="multipart/form-data">
           @csrf
           <a class="btn" href="/item/{{ $cart->work->id }}">戻る</a>     
-          <button type="submit"><a class="btn">購入続きに進む</a></button>    
+          <button type="submit"><a class="btn">購入手続きに進む</a></button>    
         </form>
       </div>
     @endif

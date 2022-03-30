@@ -45,27 +45,19 @@ class TransactionController extends Controller
     
     public function store(WorkRequest $request, Work $work) {
         
-        //work_imagesのwork_idの中にworkのidを挿入する
-        // dd($request);
-        $form = $request->all();
         $image = $request->file('image_path');
         // dd($image);
         $image_path = Storage::disk('s3')->put('/images', $image, 'public');
         // dd($image_path);
         $work->image_path = Storage::disk('s3')->url($image_path);
         
+        $work->user_id = Auth::id();
+        
         $user_id = Auth::id();
         $input_work = $request['work'];
         // dd($request['work']);
         $work->fill($input_work);
         $work->save();
-        
-        
-        // $file = $request->file('file_path');
-        // $file_path = Storage::disk('s3')->put('/files', $file, '$file', 'public');
-        // $work_file->file_path = Storage::disk('s3')->url($file_path);
-        // $work_file->work_id = $work->id;
-        // $work_file->save();
         
         
         return redirect('/create/' . $work->id);
@@ -75,6 +67,35 @@ class TransactionController extends Controller
         
         // dd($work_file);
         return view('transaction/display')->with(['work' => $work]);
+    }
+    
+    public function edit_create(Work $work)
+    {
+        return view('transaction/edit_create')->with(['work' => $work]);
+    }
+    
+    public function update_create(WorkRequest $request , Work $work) {
+        $image = $request->file('image_path');
+        // dd($image);
+        $image_path = Storage::disk('s3')->put('/images', $image, 'public');
+        // dd($image_path);
+        $work->image_path = Storage::disk('s3')->url($image_path);
+        
+        $work->user_id = Auth::id();
+        
+        $user_id = Auth::id();
+        $input_work = $request['work'];
+        // dd($request['work']);
+        $work->fill($input_work);
+        $work->save();
+        
+        return redirect('/create/' . $work->id);
+    }
+    
+    public function delete(Work $work)
+    {
+        $work->delete();
+        return redirect('/');
     }
     
     public function myprofile(User $user, Work $work) {

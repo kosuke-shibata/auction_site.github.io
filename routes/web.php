@@ -25,6 +25,12 @@ Route::post('/create', 'TransactionController@store');
 
 Route::get('/create/{work}', 'TransactionController@display');
 
+Route::get('/create/{work}/edit', 'TransactionController@edit_create');
+
+Route::put('/create/{work}', 'TransactionController@update_create');
+
+Route::delete('/create/{work}', 'TransactionController@delete');
+
 Route::get('/myprofile/{user}', 'TransactionController@myprofile');
 
 Route::get('/profile/{user}', 'TransactionController@profile');

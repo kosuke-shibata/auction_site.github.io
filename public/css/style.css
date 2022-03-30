@@ -293,6 +293,7 @@ body #app main #display_block dl dd img {
      object-position: 0 0;
 }
 
+body #app main .edit,
 body #app main .return {
   display: block;
   text-align: right;
@@ -300,6 +301,20 @@ body #app main .return {
   padding-bottom: 20px;
   font-size: 20px;
   color: #000;
+}
+
+body #app main #form_delete {
+  text-align: right;
+}
+
+body #app main #form_delete .delete {
+  border: none;
+  background: rgba(255, 255, 255, 0);
+  color: #000;
+  text-decoration: underline;
+  font-size: 20px;
+  padding-right: 200px;
+  padding-bottom: 20px;
 }
 
 body #app main #profile_info {
@@ -324,9 +339,14 @@ body #app main #profile_info .profile_text {
 
 body #app main #profile_info .profile_text .profile_image {
   width: 50%;
+  text-align: center;
 }
 
 body #app main #profile_info .profile_text .profile_image img {
+  padding: 10px;
+  border: 5px solid;
+  background: #fff;
+  border-radius: 50%;
   width: 80%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -363,13 +383,13 @@ body #app main #profile_info .profile_purchase_histories .profile_blocks {
 
 body #app main #profile_info .profile_works .profile_blocks .profile_block,
 body #app main #profile_info .profile_purchase_histories .profile_blocks .profile_block {
-  width: 250px;
   margin: 30px 20px 50px;
 }
 
 body #app main #profile_info .profile_works .profile_blocks .profile_block img,
 body #app main #profile_info .profile_purchase_histories .profile_blocks .profile_block img {
-  width: 100%;
+  width: 250px;
+  height: 250px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: 0 0;

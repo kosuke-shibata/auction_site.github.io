@@ -15,6 +15,11 @@
   <dd><a href="{{ $work->file_path }}">{{ $work->file_path }}</a></dd>
 </dl>
 </section>
-<a class="edit" href="/create/edit">編集する</a>
+<a class="edit" href="/create/{{ $work->id }}/edit">編集する</a>
 <a class="return" href="/">戻る</a>
+<form action="/create/{{ $work->id }}" id="form_delete" method="post">
+    @csrf
+    @method('DELETE')
+    <button type="submit" class="delete">削除する</button>  
+</form>
 @endsection

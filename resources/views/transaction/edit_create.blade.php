@@ -5,7 +5,7 @@
 <div class="row justify-content-center">
     <div class="col-md-8">
         <div class="card">
-            <div class="card-header">出品</div>
+            <div class="card-header">出品情報編集</div>
             @if ($errors->any())
                     <div class="alert alert-danger">
                         <ul>
@@ -16,8 +16,9 @@
                     </div>
                 @endif
             <div class="card-body">
-                <form method="POST" action="/create"  enctype="multipart/form-data">
+                <form method="POST" action="/create/{{ $work->id }}"  enctype="multipart/form-data">
                   @csrf
+                  @method('PUT')
                     <div class="form-group row">
                         <label for="title" class="col-md-4 col-form-label text-md-right">{{ __('出品者:') }}</label>
                         <p>{{Auth::user()->name}}</p>
@@ -27,7 +28,7 @@
                         <label for="title" class="col-md-4 col-form-label text-md-right">{{ __('タイトル:') }}</label>
 
                         <div class="col-md-6">
-                            <input id="title" type="text" class="form-control @error('title') is-invalid @enderror" name="work[title]" value="{{ old('work.title') }}" required autocomplete="title" autofocus>
+                            <input id="title" type="text" class="form-control @error('title') is-invalid @enderror" name="work[title]" value="{{ $work->title }}" required autocomplete="title" autofocus>
 
                               @error('title')
                                 <span class="invalid-feedback" role="alert">
@@ -41,7 +42,7 @@
                         <label for="price" class="col-md-4 col-form-label text-md-right">{{ __('値段:') }}</label>
 
                         <div class="col-md-6">
-                            <select id="price" type="price" class="form-control @error('price') is-invalid @enderror" name="work[price]" value="{{ old('work.price') }}" required autocomplete="price">
+                            <select id="price" type="price" class="form-control @error('price') is-invalid @enderror" name="work[price]" value="{{ $work->price }}" required autocomplete="price">
                               <option value="0">0</option>
                               <option value="500">500</option>
                               <option value="1000">1000</option>
@@ -62,7 +63,7 @@
                     <div class="form-group row">
                         <label for="body" class="col-md-4 col-form-label text-md-right">{{ __('商品説明:') }}</label>
                         <div class="col-md-6">
-                            <textarea id="body" type="text" class="form-control intro @error('body') is-invalid @enderror" name="work[body]"  required autocomplete="off">{{ old('work.body') }}</textarea>
+                            <textarea id="body" type="text" class="form-control intro @error('body') is-invalid @enderror" name="work[body]"  required autocomplete="off">{{ $work->body }}</textarea>
 
                               @error('body')
                                 <span class="invalid-feedback" role="alert">
@@ -76,7 +77,7 @@
                       <label for="work_image" class="col-md-4 col-form-label text-md-right">{{ __('画像:') }}</label>
 
                       <div class="col-md-6">
-                          <input id="work_image" type="file" class="form-control @error('work_image') is-invalid @enderror" name="image_path" accept=".png, .jpg, .jpeg" multiple required autocomplete="work_image" autofocus>
+                          <input id="work_image" type="file" class="form-control @error('work_image') is-invalid @enderror" name="image_path" value="{{ $work->image_path }}" accept=".png, .jpg, .jpeg" multiple required autocomplete="work_image" autofocus>
 
                               @error('work_image')
                                 <span class="invalid-feedback" role="alert">
@@ -90,7 +91,7 @@
                       <label for="work_file" class="col-md-4 col-form-label text-md-right">{{ __('ファイル (Githubなど):') }}</label>
 
                       <div class="col-md-6">
-                          <input id="work_file" type="text" class="form-control @error('work_file') is-invalid @enderror" name="work[file_path]" value="{{ old('work.file_path') }}" multiple required autocomplete="work_file" autofocus>
+                          <input id="work_file" type="text" class="form-control @error('work_file') is-invalid @enderror" name="work[file_path]" value="{{ $work->file_path }}" multiple required autocomplete="work_file" autofocus>
 
                               @error('work_file')
                                 <span class="invalid-feedback" role="alert">

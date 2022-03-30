@@ -2282,6 +2282,13 @@ $('.menu-button').on('click', function () {
     $('.menu-command').addClass('menu-open');
   }
 });
+$('.delete').on('click', function () {
+  if (confirm('本当に削除しますか？')) {
+    $('#form_delete').submit();
+  } else {
+    return false;
+  }
+});
 
 /***/ }),
 
