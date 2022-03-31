@@ -43,7 +43,7 @@
 - ペジネーション処理
 
 ### 成果物詳細画面
-<img width="800" alt="スクリーンショット 2022-04-01 1 42 32" src="https://user-images.githubusercontent.com/83070201/161108946-45a08d7a-5291-4e44-a44d-217a1a60a6ef.png">
+<img width="800px" alt="スクリーンショット 2022-04-01 1 42 32" src="https://user-images.githubusercontent.com/83070201/161108946-45a08d7a-5291-4e44-a44d-217a1a60a6ef.png">
 
 - 画像下の名前を押すと作成者のプロフィールに移動する
 - 「カートに入れる」を押すとカートに成果物の情報が入る
@@ -55,6 +55,8 @@
 - Emailアドレスとパスワードを入力するとログインする
 
 ### 出品画面
+<img width="800px" alt="スクリーンショット 2022-04-01 1 47 30" src="https://user-images.githubusercontent.com/83070201/161109124-608f4bee-82ab-4ae5-8a01-e517e2a1e5e1.png">
+
 - 成果物の情報を入力して「出品する」を押すと、出品される
 
 ### 出品完了画面
