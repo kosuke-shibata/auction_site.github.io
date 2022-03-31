@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class DropWorkFilesTable extends Migration
+class DropWorkImageTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,6 @@ class DropWorkFilesTable extends Migration
      */
     public function up()
     {
-        Schema::table('work_files', function (Blueprint $table) {
-            //
-        });
     }
 
     /**
@@ -25,6 +22,8 @@ class DropWorkFilesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('work_files');
+        Schema::table('work_images', function (Blueprint $table) {
+            Schema::dropIfExists('work_images');
+        });
     }
 }

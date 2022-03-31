@@ -12,9 +12,9 @@ class PurchaseHistoriesTableSeeder extends Seeder
     public function run()
     {
         DB::table('purchase_histories')->insert([
-            'id' => 1,
-            'user_id' => 2,
-            'work_id' => 1,
+            // 'id' => 1,
+            // 'user_id' => 2,
+            // 'work_id' => 1,
         ]);
     }
 }

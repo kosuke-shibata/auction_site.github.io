@@ -35,7 +35,7 @@ class TransactionController extends Controller
         $cart->save();
         
         // dd($cart);
-        return redirect('/cart/' . $cart->user_id);
+        return redirect('/cart');
     }
     
     public function create(User $user)
@@ -107,7 +107,8 @@ class TransactionController extends Controller
         return view('transaction/profile')->with(['user' => $user])->with(['works' => $work->where('user_id', $user->id)->get()]);
     }
     
-    public function cart(Cart $cart, $user_id, User $user, Work $work) {
+    public function cart(Cart $cart) {
+        // dd($user);
         $user_id = Auth::id();
         $cart = \App\Cart::where('user_id', $user_id)->first();
         

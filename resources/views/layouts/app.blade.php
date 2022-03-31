@@ -40,7 +40,7 @@
                 <img src="{{Auth::user()->image_path}}" alt="">
                 @endif
               </a></li>
-              <li><a href="/cart/{{ Auth::user()->id }}"><img src="https://auctionworksbucket.s3.ap-northeast-1.amazonaws.com/public/images/cart.png" alt=""></a></li>
+              <li><a href="/cart"><img src="https://auctionworksbucket.s3.ap-northeast-1.amazonaws.com/public/images/cart.png" alt=""></a></li>
               <li>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" href="{{ route('logout') }}"

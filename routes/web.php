@@ -35,7 +35,7 @@ Route::get('/myprofile/{user}', 'TransactionController@myprofile');
 
 Route::get('/profile/{user}', 'TransactionController@profile');
 
-Route::get('/cart/{user_id}', 'TransactionController@cart');
+Route::get('/cart', 'TransactionController@cart');
 
 Route::post('/cart/{user_id}', 'TransactionController@order_in');
 
