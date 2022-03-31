@@ -17,7 +17,7 @@ class UsersTableSeeder extends Seeder
             'introduce' => '初めまして。よろしくお願いします。',
             'credit' => '123456789',
             'email' => 'sittake1517@gmail.com',
-            'password' => 'abcdefghij',
+            'password' => '$2y$10$IAW6v6nxoaqG91IFck12i.UlLAQ2fTEPIS3C8OEr34ajrKtmxfw0K',
         ]);
         
         DB::table('users')->insert([
@@ -26,7 +26,7 @@ class UsersTableSeeder extends Seeder
             'introduce' => '僕は山田太郎だ。男だ。22歳だ。',
             'credit' => '987654321',
             'email' => 'yamada1111@gmail.com',
-            'password' => 'klmnopqrstu',
+            'password' => '$2y$10$khqFRbuIpa6gYCfAQ/ygDusN0.MhjiiVX.RIi4YPsWdr8XHNj4ZqC',
         ]);
     }
 }
