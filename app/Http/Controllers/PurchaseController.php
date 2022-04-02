@@ -51,6 +51,8 @@ class PurchaseController extends Controller
         $user_id = Auth::id();
         $order = \App\Order::where('user_id', $user_id)->first();
         
+        $cart_delete = \App\Cart::where('user_id', $user_id)->delete();
+        
         return view('purchase/order_decision')->with(['order' => $order]);
     }
 }
