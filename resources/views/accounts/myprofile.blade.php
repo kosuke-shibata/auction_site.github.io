@@ -2,7 +2,7 @@
 
 @section('content')
 <section id="profile_info">
-  <h2>プロフィール</h2>
+  <h2>マイプロフィール</h2>
   <a class="edit" href="/myprofile/{{ $user->id }}/edit">プロフィール編集</a>
   <a class="edit" href="/myprofile/{{ $user->id }}/edit_credit">クレジットカード登録編集</a>
   <!--<a class="edit" href="/myprofile/{{ $user->id }}/edit_email&password">ログイン情報編集</a>-->

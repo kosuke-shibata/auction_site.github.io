@@ -29,7 +29,7 @@
         </tr>
       </tbody>
     </table>
-    <form class="cart_btn" method="POST" action="/order/{{ $order->user_id }}"  enctype="multipart/form-data">
+    <form class="cart_btn" method="POST" action="/order"  enctype="multipart/form-data">
       @csrf
       <a class="btn" href="/cart/{{ $order->user->id }}">戻る</a>     
       <button type="submit"><a class="btn">購入を決定</a></button>

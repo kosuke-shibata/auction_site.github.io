@@ -13,49 +13,54 @@
 
 // Route::get('/work', 'AuctionController@index');
 
-Route::get('/', 'TransactionController@index');
+Route::get('/', 'ItemController@index');
 
-Route::get('/item/{work}', 'TransactionController@detail');
+Route::get('/item/{work}', 'ItemController@detail');
 
-Route::post('/item/{work}', 'TransactionController@cart_in');
+Route::post('/item/{work}', 'ItemController@cart_in');
 
-Route::get('/create', 'TransactionController@create');
 
-Route::post('/create', 'TransactionController@store');
+Route::get('/create', 'ExhibitionController@create');
 
-Route::get('/create/{work}', 'TransactionController@display');
+Route::post('/create', 'ExhibitionController@store');
 
-Route::get('/create/{work}/edit', 'TransactionController@edit_create');
+Route::get('/create/{work}', 'ExhibitionController@display');
 
-Route::put('/create/{work}', 'TransactionController@update_create');
+Route::get('/create/{work}/edit', 'ExhibitionController@edit_create');
 
-Route::delete('/create/{work}', 'TransactionController@delete');
+Route::put('/create/{work}', 'ExhibitionController@update_create');
 
-Route::get('/myprofile/{user}', 'TransactionController@myprofile');
+Route::delete('/create/{work}', 'ExhibitionController@delete');
 
-Route::get('/profile/{user}', 'TransactionController@profile');
 
-Route::get('/cart', 'TransactionController@cart');
+Route::get('/myprofile/{user}', 'AccountController@myprofile');
 
-Route::post('/cart/{user_id}', 'TransactionController@order_in');
+Route::get('/profile/{user}', 'AccountController@profile');
 
-Route::get('/order/{user_id}', 'TransactionController@order');
+Route::get('/myprofile/{user}/edit', 'AccountController@edit_profile');
 
-Route::post('/order/{user_id}', 'TransactionController@order_decision_in');
+Route::put('/myprofile/{user}/edit', 'AccountController@update_profile');
 
-Route::get('/order/{user_id}/decision', 'TransactionController@order_decision');
+Route::get('/myprofile/{user}/edit_credit', 'AccountController@edit_credit');
 
-Route::get('/myprofile/{user}/edit', 'TransactionController@edit');
+Route::put('/myprofile/{user}/edit_credit', 'AccountController@update_credit');
 
-Route::put('/myprofile/{user}/edit', 'TransactionController@update');
+Route::get('/myprofile/{user}/edit_login', 'AccountController@edit_login');
 
-Route::get('/myprofile/{user}/edit_credit', 'TransactionController@edit_credit');
+Route::put('/myprofile/{user}/edit_login', 'AccountController@update_login');
 
-Route::put('/myprofile/{user}/edit_credit', 'TransactionController@update_credit');
 
-Route::get('/myprofile/{user}/edit_email&password', 'TransactionController@edit_login');
+Route::get('/cart', 'PurchaseController@cart');
 
-Route::put('/myprofile/{user}/edit_email&password', 'TransactionController@update_login');
+Route::post('/cart', 'PurchaseController@order_in');
+
+Route::get('/order', 'PurchaseController@order');
+
+Route::post('/order', 'PurchaseController@order_decision_in');
+
+Route::get('/order/decision', 'PurchaseController@order_decision');
+
+
 
 Auth::routes();
 
