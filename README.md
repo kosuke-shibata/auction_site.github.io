@@ -1,78 +1,114 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+## アプリケーション名
+<a href="https://user-images.githubusercontent.com/83070201/160960766-5990c6f4-a5f7-469a-a152-30d9211805f9.png" target="_blank">![main-title](https://user-images.githubusercontent.com/83070201/160960766-5990c6f4-a5f7-469a-a152-30d9211805f9.png)</a>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+## 作成背景
 
-## About Laravel
+このアプリケーションはプログラミングやWebデザインの勉強を始めたばかりの人をターゲットにした成果物の販売サイトである。
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+昨今の副業ブームにより、プログラミングやWebデザインの勉強を始める人が増加している。しかし、実際に案件を獲得することは難しく、途中で断念してしまう人も多くない。
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+実際私も2021年の2月からプログラミングの勉強をはじめたが、現在もプログラミングで収入を得ることはできていない。
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+そこで、プログラミング初心者やWebデザイン初心者でも企業や個人から案件を獲得できるようなサイトを作ることはできないかと考えたのがこのサイトを作成した背景である。
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 使用の流れ・工夫点
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+サイトの流れとしては、作成されたサイトやWebデザインなどを一覧として見ることができ、気に入ったものがあったら購入するというものである。
 
-## Laravel Sponsors
+出品するものは、自分がこれまでに作ってきた架空のサイトやWebデザインなどである。購入者はその中から自分の気に入った成果物を買うことができる。
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+成果物は出品の際にURLを埋める欄があり、そこにGitHubのURLを載せる。買い手側は購入するとそのURLが見れるようになるということになる。
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
-- [Appoly](https://www.appoly.co.uk)
-- [OP.GG](https://op.gg)
+成果物を出品するユーザーは初心者を想定して作ってあるため、成果物を売る際の価格は0円、500円、1000円のような低価格に設定できるようにしている。そのため、企業には掘り出し物を見つけるような感覚でこのサイトを使用できるというメリットがある。
 
-## Contributing
+売り手側としては自分の成果物を見てもらえるだけでなく、買い手側から気に入ってもらえればその成果物が案件として生まれ変わるというメリットもある。
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Code of Conduct
+## 機能
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### ヘッダー
+- アプリケーションのロゴを押すと一覧画面に移動する
+- 新規登録を押すと会員登録に移動する
+- ログインを押すとマイページログイン画面に移動する
+- カートを押すとカート画面に移動する（ログイン前はログイン画面に移動）
+- 「出品する」を押すと出品画面に移動する（ログイン前はログイン画面に移動）
+- プロフィール写真を押すとマイプロフィール画面に移動する
+- ログアウトを押すとログアウトしログイン前に戻る
 
-## Security Vulnerabilities
+### 一覧画面
+<img width="800px" alt="スクリーンショット 2022-04-01 1 42 02" src="https://user-images.githubusercontent.com/83070201/161108413-ea96ce17-1208-49c4-b5df-a7575753e6e6.png">
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- 画像を押すと成果物詳細に移動する
+- ペジネーション処理
 
-## License
+### 成果物詳細画面
+<img width="800px" alt="スクリーンショット 2022-04-01 1 42 32" src="https://user-images.githubusercontent.com/83070201/161108946-45a08d7a-5291-4e44-a44d-217a1a60a6ef.png">
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- 画像下の名前を押すと作成者のプロフィールに移動する
+- 「カートに入れる」を押すとカートに成果物の情報が入る
+
+### 新規登録画面
+- 個人情報を入力しRegisterを押すとログインする
+
+### ログイン画面
+- Emailアドレスとパスワードを入力するとログインする
+
+### 出品画面
+<img width="800px" alt="スクリーンショット 2022-04-01 1 47 30" src="https://user-images.githubusercontent.com/83070201/161109124-608f4bee-82ab-4ae5-8a01-e517e2a1e5e1.png">
+
+- 成果物の情報を入力して「出品する」を押すと、出品される
+
+### 出品完了画面
+<img width="800px" alt="スクリーンショット 2022-04-01 1 48 31 1" src="https://user-images.githubusercontent.com/83070201/161109449-a6fa3487-41c8-4b94-9862-ece8df286e81.png">
+
+- 「編集する」を押すと、成果物の編集が可能になる
+- 「戻る」を押すと、一覧画面に戻る
+- 「削除する」を押すと、成果物が削除される
+
+### カート画面（未完成）
+- 「購入手続きに進む」を押すと購入画面に移動
+- 「戻る」を押すと一覧画面に戻る
+
+### 購入画面（未完成）
+- 個人情報が全て入っていれば「購入を決定」が押せるようになる
+- 「購入を決定」を押すと購入決定画面に移動する
+- その後カート画面から購入したものの情報が消える（まだ導入途中）
+- 「戻る」を押すと一覧画面に戻る
+
+### マイプロフィール画面
+- 「プロフィール編集」を押すとプロフィールの編集が可能になる
+- 「クレジットカード登録編集」を押すとプロフィールの編集が可能になる
+- 成果物の画像を押すとその成果物の出品完了画面に移動する
+- 購入履歴の画像を押すとその成果物の購入完了画面に移動する（まだ導入途中）
+
+### プロフィール画面
+- 成果物の画像を押すとその成果物の詳細画面に移動する
+- 購入履歴の画像を押すとその成果物の詳細画面に移動する（まだ導入途中）
+
+## 環境
+### 【言語】
+HTML,CSS,SCSS,Javascript,PHP(8.0.15)
+
+### 【フレームワーク・ライブラリ】
+Laravel（6.20.44）
+jQuery（3.6.0）
+
+### 【OS】
+Linux
+
+### 【DB】
+MariaDB
+
+## これから実装していきたいこと
+- 成果物検索機能
+- 制作者と購入者のダイレクトメール機能
+- 購入者が値段を決めることができるオークション機能
+
+
+## テストユーザー
+| id | 2 |
+| ------------- | ------------- |
+| name  | 山田太郎  |
+| email  | yamada1111@gmail.com  |
+| password | klmnopqrstu |
