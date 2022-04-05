@@ -7,13 +7,14 @@ use Illuminate\Http\Request;
 use App\Http\Requests\EditRequest;
 use App\User;
 use App\Work;
+use App\PurchaseHistory;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Auth;
 
 class AccountController extends Controller
 {
-    public function myprofile(User $user, Work $work) {
-        return view('accounts/myprofile')->with(['user' => $user])->with(['works' => $work->where('user_id', $user->id)->get()]);
+    public function myprofile(User $user, Work $work, PurchaseHistory $purchase_history) {
+        return view('accounts/myprofile')->with(['user' => $user])->with(['works' => $work->where('user_id', $user->id)->get()])->with(['purchase_historys' => $purchase_history->where('user_id', $user->id)->get()]);
     }
     
     public function profile(User $user, Work $work) {

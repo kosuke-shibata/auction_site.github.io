@@ -16,7 +16,7 @@
                   </div>
               @endif
               <div class="card-body">
-                  <form method="POST" action="/profile/{{ $user->id }}/edit_credit" enctype="application/x-www-form-urlencoded">
+                  <form method="POST" action="/myprofile/{{ $user->id }}/edit_credit" enctype="application/x-www-form-urlencoded">
                     @csrf
                     @method('PUT')
                       <div class="form-group row">

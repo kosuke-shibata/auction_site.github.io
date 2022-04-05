@@ -26,7 +26,7 @@ Route::post('/create', 'ExhibitionController@store');
 
 Route::get('/create/{work}', 'ExhibitionController@display');
 
-Route::get('/create/{work}/edit', 'ExhibitionController@edit_create');
+Route::get('/create/{work}/edit', 'ExhibitionController@edit');
 
 Route::put('/create/{work}', 'ExhibitionController@update_create');
 

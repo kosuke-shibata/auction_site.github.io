@@ -9,8 +9,8 @@ $('.menu-button').on('click', function() {
 
 $('.delete').on('click', function() {
   if (confirm('本当に削除しますか？')) {
-      $('#form_delete').submit();
+    $('#form_delete').submit();
   } else {
-      return false;
+    return false;
   }
 });

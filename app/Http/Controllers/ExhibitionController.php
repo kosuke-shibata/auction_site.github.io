@@ -25,7 +25,6 @@ class ExhibitionController extends Controller
         
         $work->user_id = Auth::id();
         
-        $user_id = Auth::id();
         $input_work = $request['work'];
         $work->fill($input_work);
         $work->save();
@@ -39,9 +38,9 @@ class ExhibitionController extends Controller
         return view('exhibition/display')->with(['work' => $work]);
     }
     
-    public function edit_create(Work $work)
+    public function edit(Work $work)
     {
-        return view('exhibition/edit_create')->with(['work' => $work]);
+        return view('exhibition/edit')->with(['work' => $work]);
     }
     
     public function update_create(WorkRequest $request , Work $work) {

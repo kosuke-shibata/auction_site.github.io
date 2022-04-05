@@ -11,8 +11,8 @@
       <dt>Eメールアドレス：</dt>
       <dd>{{ $order->user->email }}</dd>
       <dt>クレジットカード：</dt>
-      <dd>{{ $order->user->credit }}<a href="/myprofile/{{ $order->user->id }}/edit_credit"><span>※なければこちらからご登録お願いします。</span></a>
-        </dd>
+      <dd>{{ $order->user->credit }}<a href="/myprofile/{{ $order->user->id }}/edit_credit"><span>※なければこちらからご登録お願いします。</span></a></dd>
+      <p class="credit_text" style="color: red;"></p>
     </dl>
     <h3>注文一覧</h3>
     <table>
@@ -31,8 +31,12 @@
     </table>
     <form class="cart_btn" method="POST" action="/order"  enctype="multipart/form-data">
       @csrf
-      <a class="btn" href="/cart/{{ $order->user->id }}">戻る</a>     
+      <a class="btn" href="/cart/{{ $order->user->id }}">戻る</a>
+      @if (!is_null($order->user->credit))
       <button type="submit"><a class="btn">購入を決定</a></button>
+      @else
+      <button type="submit" disabled><a class="btn" style="opacity: 0.7;">購入を決定</a></button>
+      @endif
     </form>
   </div>
 </div>
