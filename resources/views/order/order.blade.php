@@ -7,11 +7,11 @@
   <div class="order_detail_text">
     <dl>
       <dt>お名前：</dt>
-      <dd>{{ $order->user->name }}</dd>
+      <dd>{{ $cart->user->name }}</dd>
       <dt>Eメールアドレス：</dt>
-      <dd>{{ $order->user->email }}</dd>
+      <dd>{{ $cart->user->email }}</dd>
       <dt>クレジットカード：</dt>
-      <dd>{{ $order->user->credit }}<a href="/myprofile/{{ $order->user->id }}/edit_credit"><span>※なければこちらからご登録お願いします。</span></a></dd>
+      <dd>{{ $cart->user->credit }}<a href="/myprofile/{{ $cart->user->id }}/edit_credit"><span>※なければこちらからご登録お願いします。</span></a></dd>
       <p class="credit_text" style="color: red;"></p>
     </dl>
     <h3>注文一覧</h3>
@@ -24,15 +24,15 @@
       </thead>
       <tbody>
         <tr>
-          <td>{{ $order->work->title }}</td>
-          <td>¥{{ $order->work->price }}</td>
+          <td>{{ $cart->work->title }}</td>
+          <td>¥{{ $cart->work->price }}</td>
         </tr>
       </tbody>
     </table>
-    <form class="cart_btn" method="POST" action="/order"  enctype="multipart/form-data">
+    <form class="order_btn" method="POST" action="/order"  enctype="multipart/form-data">
       @csrf
-      <a class="btn" href="/cart/{{ $order->user->id }}">戻る</a>
-      @if (!is_null($order->user->credit))
+      <a class="btn" href="/cart/{{ $cart->user->id }}">戻る</a>
+      @if (!is_null($cart->user->credit))
       <button type="submit"><a class="btn">購入を決定</a></button>
       @else
       <button type="submit" disabled><a class="btn" style="opacity: 0.7;">購入を決定</a></button>

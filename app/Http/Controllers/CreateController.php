@@ -10,11 +10,11 @@ use App\Work;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Auth;
 
-class ExhibitionController extends Controller
+class CreateController extends Controller
 {
     public function create(User $user)
     {
-        return view('exhibition/create')->with(['users' => $user->get()]);
+        return view('creates/create')->with(['users' => $user->get()]);
     }
     
     public function store(WorkRequest $request, Work $work) {
@@ -35,15 +35,15 @@ class ExhibitionController extends Controller
     
     public function display(Work $work) {
         
-        return view('exhibition/display')->with(['work' => $work]);
+        return view('creates/display')->with(['work' => $work]);
     }
     
     public function edit(Work $work)
     {
-        return view('exhibition/edit')->with(['work' => $work]);
+        return view('creates/edit')->with(['work' => $work]);
     }
     
-    public function update_create(WorkRequest $request , Work $work) {
+    public function update(WorkRequest $request , Work $work) {
         $image = $request->file('image_path');
         $image_path = Storage::disk('s3')->put('/images', $image, 'public');
         $work->image_path = Storage::disk('s3')->url($image_path);

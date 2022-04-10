@@ -4,7 +4,7 @@
 <section id="works_block">
   @foreach ($works as $work)
     <div class="work_block">
-      <a href="/item/{{ $work->id }}">
+      <a href="/work/{{ $work->id }}">
         <img src="{{ $work->image_path }}" alt="">
         <div class="work_info">
           <h3>{{ $work->title }}</h3>

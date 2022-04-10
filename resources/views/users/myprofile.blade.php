@@ -42,7 +42,7 @@
     <div class="profile_blocks">
       @foreach ($purchase_historys as $purchase_history)
       <div class="profile_block">
-        <a href="/order/decision"><img src="{{ $purchase_history->work->image_path }}" alt=""></a>
+        <a href="/order/decision/{{ $purchase_history->work_id }}"><img src="{{ $purchase_history->work->image_path }}" alt=""></a>
       </div>
       @endforeach
     </div>

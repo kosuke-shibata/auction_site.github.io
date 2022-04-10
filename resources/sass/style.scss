@@ -408,14 +408,18 @@ body {
               }
             }
           }
-          .cart_btn {
+          .cart_btn, .order_btn {
             display: flex;
             justify-content: space-between;
             width: 80%;
             margin: 50px auto 200px;
-            .btn {
-              display: inline-block;
-              border-radius: 0px;
+            button {
+              border: none;
+              background:rgba(255, 255, 255, 0);
+              .btn {
+                display: inline-block;
+                border-radius: 0px;
+              }
             }
           }
         }

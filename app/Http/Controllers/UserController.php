@@ -11,18 +11,18 @@ use App\PurchaseHistory;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Auth;
 
-class AccountController extends Controller
+class UserController extends Controller
 {
     public function myprofile(User $user, Work $work, PurchaseHistory $purchase_history) {
-        return view('accounts/myprofile')->with(['user' => $user])->with(['works' => $work->where('user_id', $user->id)->get()])->with(['purchase_historys' => $purchase_history->where('user_id', $user->id)->get()]);
+        return view('users/myprofile')->with(['user' => $user])->with(['works' => $work->where('user_id', $user->id)->get()])->with(['purchase_historys' => $purchase_history->where('user_id', $user->id)->get()]);
     }
     
     public function profile(User $user, Work $work) {
-        return view('accounts/profile')->with(['user' => $user])->with(['works' => $work->where('user_id', $user->id)->get()]);
+        return view('users/profile')->with(['user' => $user])->with(['works' => $work->where('user_id', $user->id)->get()]);
     }
     
     public function edit_profile(User $user) {
-        return view('accounts/edit_profile')->with(['user' => $user]);
+        return view('users/edit_profile')->with(['user' => $user]);
     }
     
     public function update_profile(EditRequest $request, User $user) {
@@ -40,7 +40,7 @@ class AccountController extends Controller
     
     public function edit_credit(User $user) {
         
-        return view('accounts/edit_credit')->with(['user' => $user]);
+        return view('users/edit_credit')->with(['user' => $user]);
     }
     
     public function update_credit(Request $request, User $user) {
@@ -51,7 +51,7 @@ class AccountController extends Controller
     }
     
     public function edit_login(User $user) {
-        return view('accounts/edit_login')->with(['user' => $user]);
+        return view('users/edit_login')->with(['user' => $user]);
     }
     
     public function update_login(Request $request, User $user) {

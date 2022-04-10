@@ -525,19 +525,39 @@ body #app main #order_info .order_detail_text dl dd img {
 }
 
 body #app main #cart_info .cart_detail_text .cart_btn,
+body #app main #cart_info .cart_detail_text .order_btn,
 body #app main #cart_info .order_detail_text .cart_btn,
+body #app main #cart_info .order_detail_text .order_btn,
 body #app main #order_info .cart_detail_text .cart_btn,
-body #app main #order_info .order_detail_text .cart_btn {
+body #app main #order_info .cart_detail_text .order_btn,
+body #app main #order_info .order_detail_text .cart_btn,
+body #app main #order_info .order_detail_text .order_btn {
   display: flex;
   justify-content: space-between;
   width: 80%;
   margin: 50px auto 200px;
 }
 
-body #app main #cart_info .cart_detail_text .cart_btn .btn,
-body #app main #cart_info .order_detail_text .cart_btn .btn,
-body #app main #order_info .cart_detail_text .cart_btn .btn,
-body #app main #order_info .order_detail_text .cart_btn .btn {
+body #app main #cart_info .cart_detail_text .cart_btn button,
+body #app main #cart_info .cart_detail_text .order_btn button,
+body #app main #cart_info .order_detail_text .cart_btn button,
+body #app main #cart_info .order_detail_text .order_btn button,
+body #app main #order_info .cart_detail_text .cart_btn button,
+body #app main #order_info .cart_detail_text .order_btn button,
+body #app main #order_info .order_detail_text .cart_btn button,
+body #app main #order_info .order_detail_text .order_btn button {
+  border: none;
+  background: rgba(255, 255, 255, 0);
+}
+
+body #app main #cart_info .cart_detail_text .cart_btn button .btn,
+body #app main #cart_info .cart_detail_text .order_btn button .btn,
+body #app main #cart_info .order_detail_text .cart_btn button .btn,
+body #app main #cart_info .order_detail_text .order_btn button .btn,
+body #app main #order_info .cart_detail_text .cart_btn button .btn,
+body #app main #order_info .cart_detail_text .order_btn button .btn,
+body #app main #order_info .order_detail_text .cart_btn button .btn,
+body #app main #order_info .order_detail_text .order_btn button .btn {
   display: inline-block;
   border-radius: 0px;
 }

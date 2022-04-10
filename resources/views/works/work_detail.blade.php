@@ -11,7 +11,7 @@
     <h2 class="detail_title">{{ $work->title }}</h2>
     <p class="price">¥{{ $work->price }}</p>
     @if(Auth::check())
-    <form method="POST" action="/item/{{ $work->id }}"  enctype="multipart/form-data">
+    <form method="POST" action="/work/{{ $work->id }}"  enctype="multipart/form-data">
       @csrf
       <button type="submit" class="btn">カートに入れる</button>
     </from>
