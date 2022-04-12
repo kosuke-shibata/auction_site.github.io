@@ -31,7 +31,7 @@
     </table>
     <form class="order_btn" method="POST" action="/order"  enctype="multipart/form-data">
       @csrf
-      <a class="btn" href="/cart/">戻る</a>
+      <a class="btn" href="/cart">戻る</a>
       @if (!is_null($cart->user->credit))
       <button type="submit"><a class="btn">購入を決定</a></button>
       @else
