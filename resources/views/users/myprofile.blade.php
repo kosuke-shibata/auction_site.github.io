@@ -1,11 +1,16 @@
+
 @extends('layouts.app')
 
 @section('content')
 <section id="profile_info">
   <h2>マイプロフィール</h2>
+  @if(Auth::user()->id === $user->id)
   <a class="edit" href="/myprofile/{{ $user->id }}/edit">プロフィール編集</a>
   <a class="edit" href="/myprofile/{{ $user->id }}/edit_credit">クレジットカード登録編集</a>
   <!--<a class="edit" href="/myprofile/{{ $user->id }}/edit_email&password">ログイン情報編集</a>-->
+  @else
+  @endif
+  
   <div class="profile_text">
     <div class="profile_image">
       @if ($user->image_path == null)
