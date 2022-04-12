@@ -55,7 +55,10 @@ class OrderController extends Controller
         // $cart = \App\Cart::where('user_id', $user_id)->first();
         $order = \App\Order::where('user_id', $user_id)->where('work_id', $work->id)->first();
         
-        $cart_delete = \App\Cart::where('user_id', $user_id)->delete();
+        // dd(url()->previous());
+        if (url()->previous() === url("/order")) {
+          $cart_delete = \App\Cart::where('user_id', $user_id)->delete();
+        }
         
         return view('order/order_decision')->with(['order' => $order]);
     }

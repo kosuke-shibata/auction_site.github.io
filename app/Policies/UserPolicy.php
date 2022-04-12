@@ -22,8 +22,6 @@ class UserPolicy
     
     public function edit(User $login_user, User $user)
     {
-        // dd($user->id);
-        // dd($user->id);
         return $user->id === $login_user->id;
         
     }
