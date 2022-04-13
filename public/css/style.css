@@ -670,10 +670,19 @@ body #app footer {
   body #app header .menu-command.menu-open .nav li a {
     padding-right: 0;
     position: static;
+    font-size: 14px;
   }
 
   body #app main {
     margin-top: 70px;
+  }
+
+  body #app main #works_block {
+    display: block;
+  }
+
+  body #app main #works_block .work_block {
+    margin: 50px auto;
   }
 
   body #app main #work_detail {

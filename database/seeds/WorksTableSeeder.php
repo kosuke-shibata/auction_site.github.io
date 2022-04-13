@@ -28,7 +28,7 @@ class WorksTableSeeder extends Seeder
             'price' => 0,
             'image_path' => 'https://auctionworksbucket.s3.ap-northeast-1.amazonaws.com/public/images/cosmetic-site.png',
             'file_path' => 'https://github.com/kosuke-shibata/cosmetic-site.github.io',
-            'user_id' => 1,
+            'user_id' => 2,
         ]);
         
         DB::table('works')->insert([

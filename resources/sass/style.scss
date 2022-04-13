@@ -521,6 +521,7 @@ body {
                 a {
                   padding-right: 0;
                   position: static;
+                  font-size: 14px;
                 }
               }
             }
@@ -529,6 +530,12 @@ body {
       }
       main {
         margin-top: 70px;
+        #works_block {
+          display: block;
+          .work_block {
+            margin: 50px auto;
+          }
+        }
         #work_detail {
           display: block;
           width: 80%;
