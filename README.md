@@ -87,6 +87,8 @@
 - 「戻る」を押すとカート画面に戻る
 
 ### 購入完了画面
+<img width="1440" alt="スクリーンショット 2022-04-13 11 05 57" src="https://user-images.githubusercontent.com/83070201/163120387-61fc98d8-107a-4b1c-bfa1-f40fdb71baab.png">
+
 - 成果物の情報一覧を取得できる
 - 「戻る」を押すと一覧画面に戻る
 
